@@ -1,4 +1,7 @@
 <?php
 return array(
-	//'配置项'=>'配置值'
+    'USER_CONFIG' => array(
+        'admin_name' => 'admin',	//管理员用户名
+        'admin_pwd' => '123456',	//管理员密码
+    ),
 );
