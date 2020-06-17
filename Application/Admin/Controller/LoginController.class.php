@@ -2,39 +2,39 @@
 namespace Admin\Controller;
 use Think\Controller;
 class LoginController extends Controller{
-    //ºóÌ¨µÇÂ½Ò³
+    //ï¿½ï¿½Ì¨ï¿½ï¿½Â½Ò³
     public function index(){
         if(IS_POST){
-            //¼ì²éÑéÖ¤Âë
+            //åˆ¤æ–­éªŒè¯ç æ˜¯å¦æ­£ç¡®
             $rst = $this->checkVerify(I('post.verify'));
             if($rst===false){
-                $this->error('ÑéÖ¤Âë´íÎó');
+                $this->error('éªŒè¯ç é”™è¯¯ï¼');
             }
-            //¼ì²éÓÃ»§ÃûÃÜÂë
+            //åˆ¤æ–­ç”¨æˆ·åå’Œå¯†ç æ˜¯å¦æ­£ç¡®
             if(I('post.admin_name')==C('USER_CONFIG.admin_name')&&
                 I('post.admin_pwd')==C('USER_CONFIG.admin_pwd')){
                 session('admin_name',C('USER_CONFIG.admin_name'));
-                $this->success('µÇÂ¼³É¹¦£¬ÇëÉÔµÈ',U('Index/index'));
+                $this->success('ç™»å½•æˆåŠŸ!',U('Index/index'));
             }else{
-                $this->error('µÇÂ½Ê§°Ü£¬ÓÃ»§Ãû»òÃÜÂë´íÎó');
+                $this->error('ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯!');
             }
             return;
         }
         $this->display();
     }
-    //Éú³ÉÑéÖ¤Âë
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½
     public function getVerify(){
         $verify = new \Think\Verify();
         return $verify->entry();
     }
-    //¼ì²éÑéÖ¤Âë
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½
     private function checkVerify($code,$id=''){
         $verify = new \Think\Verify();
         return $verify->check($code,$id);
     }
-    //ÍË³öÏµÍ³
+    //ï¿½Ë³ï¿½ÏµÍ³
     public function logout(){
         session('[destroy]');
-        $this->success('ÍË³ö³É¹¦',U('Login/index'));
+        $this->success('ï¿½Ë³ï¿½ï¿½É¹ï¿½',U('Login/index'));
     }
 }
