@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>write it now!</title>
+    <link href="../../../Public/css/layout.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../Public/css/font-awesome.min.css">
+</head>
+<body>
+<!--顶部-->
+    <div id="top">
+        <div class="top_nav">
+            <ul class="left">
+                <present name="mid">
+                    <li>Hello，{$mname}！[<a href="__MODULE__/User/logout">退出</a>]<li>
+                    <else/>
+                    <li>Hello！[<a href="__MODULE__/User/login">登录</a>][<a href="__MODULE__/User/register">免费注册</a>]</li>
+                </present>
+            </ul>
+            <ul class="right">
+                <li><a href="#"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+<!--选项-->
+<div id="option">
+    <section class="center">
+        <ul class="link">
+            <li class="z"><a href="shouye.html" target="myiframe">首页</a></li>
+            <li class="line">|</li>
+            <li class="z"><a href="talk.html" target="myiframe">讨论</a></li>
+        </ul>
+    </section>
+</div>
+<!--内嵌框架-->
+<section>
+    <iframe src="shouye.html" name="myiframe" scrolling="yes"> </iframe>
+</section>
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../../Public/css/layout.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../Public/css/font-awesome.min.css">
+</head>
+<body>
+<!--标签栏-->
+<div id="box">
+    <div id="search">
+        <ul class="menu">
+            <li><i type="button" class="fa fa-search" aria-hidden="true" name="popBox" onclick="popBox()"></i> </li>
+            <li><a href="#">科幻</a></li>
+            <li><a href="#">悬疑</a></li>
+            <li><a href="#">完结</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--弹出层-->
+<div id="popLayer"></div>
+<div id="popBox">
+    <div class="close">
+        <a href="javascript:void(0)" onclick="closeBox()"><i class="fa fa-times"></i></a>
+    </div>
+    <div class="center">
+        <input type="text" class="left" placeholder="请输入书名！">
+        <i type="button" class="fa fa-search fa-2x" aria-hidden="true">
+        </i>
+    </div>
+</div>
+<script>
+    /*点击弹出按钮*/
+    function popBox() {
+        var popBox = document.getElementById("popBox");
+        var popLayer = document.getElementById("popLayer");
+        popBox.style.display = "block";
+        popLayer.style.display = "block";
+    };
+
+    /*点击关闭按钮*/
+    function closeBox() {
+        var popBox = document.getElementById("popBox");
+        var popLayer = document.getElementById("popLayer");
+        popBox.style.display = "none";
+        popLayer.style.display = "none";
+    }
+</script>
+<!--footer-->
+{__CONTENT__}
+
+<footer><p>write it now!</p>
+    <p>win</p></footer>
+
+</body>
+</html>
