@@ -7,6 +7,7 @@ a:hover{;text-decoration:underline;}
 .right{float:right;}
 .clear{clear:both;}
 .center{text-align:center;}
+
 /*登录页*/
 .login{background:#DEEFFA;overflow:visible;}
 .login_box{width:400px;background:#fff;margin:7% auto;padding:50px;box-shadow:0 0 15px #B5CFD9;}
@@ -16,6 +17,7 @@ a:hover{;text-decoration:underline;}
 .login_box th{text-align:right;font-weight:normal;}
 .login_box .input{width:250px;height:20px;border:1px solid #ddd;padding:5px;color:#666;font-size:20px;}
 .login_box .login_btn{width:80px;height:30px;margin:0 auto;background:#09C;color:#fff;border:1px solid #DEEFFA;cursor:pointer;}
+
 /*后台公共*/
 #top{height:60px;background:#DEEFFA;border-bottom:1px solid #B5CFD9;line-height:60px;}
 #top h1{font-size:20px;color:#09C;margin-left:20px;}
@@ -43,11 +45,14 @@ a:hover{;text-decoration:underline;}
 .data-list table a{margin:0 3px;}
 .data-list table .odd{background:#fff;}
 .data-list table td,.data-list table th{border:1px solid #ddd;}/*firfox*/
+
 /*分页列表*/
+
 .pagelist{margin-top:10px;margin-left:250px;}
 .pagelist a{margin:0 5px;border:1px solid #ddd;padding:1px 4px;color:#666;}
 .pagelist a:hover{text-decoration: none;}
 .pagelist span{padding:1px 4px;}
+
 /*内容编辑*/
 .data-edit{border:1px solid #ddd;background:#F7F7F7;max-width:450px;padding:20px 40px;}
 .data-edit th{font-weight:normal;text-align:right;vertical-align:top;}
@@ -61,5 +66,4 @@ a:hover{;text-decoration:underline;}
 /*分类嵌套*/
 .data-tree{width:600px;font-size:14px;background:#F2F9FD;padding:20px;box-shadow:6px 6px 2px #ECF5FB; }
 .data-tree div{margin-left:20px;border-top:2px dotted #fff;}
-
 
