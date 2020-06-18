@@ -1,0 +1,60 @@
+[ 2020-06-18T12:06:27+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkIs
+ERR: 非法操作:Check
+
+[ 2020-06-18T12:06:37+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkIs
+ERR: 非法操作:Check
+
+[ 2020-06-18T12:06:44+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkIs/s_id/1
+ERR: 非法操作:Check
+
+[ 2020-06-18T12:27:47+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkIs/s_id/1
+ERR: 非法操作:Check
+
+[ 2020-06-18T12:27:57+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkIs/s_id/1
+ERR: 非法操作:Check
+
+[ 2020-06-18T12:28:33+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkIs/s_id/1
+ERR: 非法操作:Check
+
+[ 2020-06-18T12:28:35+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkIs/s_id/1
+ERR: 非法操作:Check
+
+[ 2020-06-18T12:28:36+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkIs/s_id/1
+ERR: 非法操作:Check
+
+[ 2020-06-18T12:28:39+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkIs/s_id/1
+ERR: 非法操作:Check
+
+[ 2020-06-18T12:40:19+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkIs/s_id/1
+ERR: 非法数据对象！:[section=>第一章]
+
+[ 2020-06-18T12:42:00+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkIs/s_id/1
+ERR: 非法数据对象！:[section=>第一章]
+
+[ 2020-06-18T12:42:51+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkIs/s_id/1
+ERR: 非法数据对象！:[section=>第一章]
+
+[ 2020-06-18T12:43:19+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkIs/s_id/1
+ERR: 非法数据对象！:[section=>第一章]
+
+[ 2020-06-18T12:43:25+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkIs/s_id/1
+ERR: 非法数据对象！:[section=>第一章]
+
+[ 2020-06-18T13:25:03+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkIs/s_id/1
+ERR: 非法数据对象！:[section=>第一章]
+
+[ 2020-06-18T13:33:00+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkIs/s_id/1
+ERR: 非法数据对象！:[section=>第一章]
+
+[ 2020-06-18T13:41:01+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkIs/s_id/1
+ERR: 非法操作:checkIs
+
+[ 2020-06-18T13:58:34+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkList
+ERR: XML标签语法错误 : $v.type=="上传" 
+
+[ 2020-06-18T14:04:54+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkUpdateIs/s_id/1
+ERR: 非法操作:Check
+
+[ 2020-06-18T14:05:04+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkUpdateIs/s_id/1
+ERR: 非法操作:Check
+

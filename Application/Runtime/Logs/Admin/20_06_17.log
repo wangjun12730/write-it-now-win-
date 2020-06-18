@@ -46,3 +46,18 @@ ERR: 无法加载控制器:Logins
 [ 2020-06-17T16:51:31+08:00 ] ::1 /write-it-now-win-/index.php/Admin/Logins
 ERR: 无法加载控制器:Logins
 
+[ 2020-06-17T22:28:33+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkList
+ERR: Think\Model:a方法不存在！
+
+[ 2020-06-17T22:28:57+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkList
+ERR: Think\Model:a方法不存在！
+
+[ 2020-06-17T22:29:14+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkList
+ERR: Think\Model:a方法不存在！
+
+[ 2020-06-17T22:34:15+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkList
+ERR: Think\Model:a方法不存在！
+
+[ 2020-06-17T22:35:33+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkList
+ERR: Think\Model:a方法不存在！
+
