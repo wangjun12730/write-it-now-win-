@@ -7,7 +7,8 @@ a:hover{;text-decoration:underline;}
 .right{float:right;}
 .clear{clear:both;}
 .center{text-align:center;}
-/*µÇÂ¼Ò³*/
+
+/*ç™»å½•é¡µ*/
 .login{background:#DEEFFA;overflow:visible;}
 .login_box{width:400px;background:#fff;margin:7% auto;padding:50px;box-shadow:0 0 15px #B5CFD9;}
 .login_box h1{font-size:24px;color:#09C;text-align:center;}
@@ -16,7 +17,8 @@ a:hover{;text-decoration:underline;}
 .login_box th{text-align:right;font-weight:normal;}
 .login_box .input{width:250px;height:20px;border:1px solid #ddd;padding:5px;color:#666;font-size:20px;}
 .login_box .login_btn{width:80px;height:30px;margin:0 auto;background:#09C;color:#fff;border:1px solid #DEEFFA;cursor:pointer;}
-/*ºóÌ¨¹«¹²*/
+
+/*åå°å…¬å…±*/
 #top{height:60px;background:#DEEFFA;border-bottom:1px solid #B5CFD9;line-height:60px;}
 #top h1{font-size:20px;color:#09C;margin-left:20px;}
 #top ul{margin-right:50px;}
@@ -35,11 +37,7 @@ a:hover{;text-decoration:underline;}
 #content .title-btn{margin-left:20px;padding-top:7px;}
 #content .title-btn a{display:block;padding:1px 10px;background:#09C;color:#fff;height:25px;line-height:25px;font-size:13px;}
 #content .title-btn a:hover{text-decoration: none;}
-/*ÉóºË*/
-
-
-
-/*ÉÌÆ·ÁĞ±í*/
+/*å•†å“åˆ—è¡¨*/
 .data-list select{min-width:100px;height:26px;}
 .data-list table{border-collapse:collapse;min-width:700px;border:1px solid #ddd;background:#F7F7F7;margin-top:10px;font-size:14px;}
 .data-list th{font-weight:normal;text-align:center;}
@@ -47,12 +45,15 @@ a:hover{;text-decoration:underline;}
 .data-list table a{margin:0 3px;}
 .data-list table .odd{background:#fff;}
 .data-list table td,.data-list table th{border:1px solid #ddd;}/*firfox*/
-/*·ÖÒ³ÁĞ±í*/
+
+/*åˆ†é¡µåˆ—è¡¨*/
+
 .pagelist{margin-top:10px;margin-left:250px;}
 .pagelist a{margin:0 5px;border:1px solid #ddd;padding:1px 4px;color:#666;}
 .pagelist a:hover{text-decoration: none;}
 .pagelist span{padding:1px 4px;}
-/*ÄÚÈİ±à¼­*/
+
+/*å†…å®¹ç¼–è¾‘*/
 .data-edit{border:1px solid #ddd;background:#F7F7F7;max-width:450px;padding:20px 40px;}
 .data-edit th{font-weight:normal;text-align:right;vertical-align:top;}
 .data-edit td{padding:0 10px;}
@@ -60,8 +61,9 @@ a:hover{;text-decoration:underline;}
 .data-edit .file{font-size:12px;}
 .data-edit textarea{width:200px;height:50px;}
 .data-edit input{width:200px;}
-/*ÄÚÈİ°´Å¥*/
+/*å†…å®¹æŒ‰é’®*/
 .tr_btn input{width:70px;height:25px;margin:20px;}
-/*·ÖÀàÇ¶Ì×*/
+/*åˆ†ç±»åµŒå¥—*/
 .data-tree{width:600px;font-size:14px;background:#F2F9FD;padding:20px;box-shadow:6px 6px 2px #ECF5FB; }
 .data-tree div{margin-left:20px;border-top:2px dotted #fff;}
+
