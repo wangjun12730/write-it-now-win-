@@ -8,38 +8,38 @@ class UserController extends CommonController
     public function __construct()
     {
         parent::__construct();
-        $allow_action=array(  //Ö¸¶¨²»ĞèÒª¼ì²éµÇÂ¼µÄ·½·¨ÁĞ±í
+        $allow_action=array(  //Ö¸æŒ‡å®šä¸éœ€è¦æ£€æŸ¥ç™»å½•çš„æ–¹æ³•åˆ—è¡¨
             'login','captcha','register'
         );
         if ($this->userInfo===false && !in_array(ACTION_NAME,$allow_action)){
-            $this->error('ÇëÏÈµÇÂ¼¡£',U('User/login'));
+            $this->error('è¯·å…ˆç™»å½•ã€‚',U('User/login'));
         }
     }
-    //ÓÃ»§µÇÂ¼
+    //ç”¨æˆ·ç™»å½•
     public function login(){
-        //´¦Àí±íµ¥
+        //å¤„ç†è¡¨å•
         if (IS_POST){
-            //ÅĞ¶ÏÑéÖ¤Âë
+            //åˆ¤æ–­éªŒè¯ç 
             $this->checkVerify(I('post.captcha'));
-            //ÅĞ¶ÏÓÃ»§ÃûºÍÃÜÂë
+            //åˆ¤æ–­ç”¨æˆ·åå’Œå¯†ç 
             $name=I('post.user','','');
             $pwd=I('post.pwd','','');
             $rst=D('member')->checkUser($name,$pwd);
             if ($rst!==true){
                 $this->error($rst);
             }
-            $this->success('µÇÂ¼³É¹¦£¬ÇëÉÔºó',U('Index/index'));
+            $this->success('ç™»å½•æˆåŠŸï¼Œè¯·ç¨å',U('Index/index'));
             return;
         }
         $this->display();
     }
-    //ÍË³ö
+    //é€€å‡º
     public function logout(){
         session('[destroy]');
-        $this->success('ÍË³ö³É¹¦',U('Index/index'));
+        $this->success('é€€å‡ºæˆåŠŸ',U('Index/index'));
     }
 
-//×¢²áĞÂÓÃ»§
+    //æ³¨å†Œæ–°ç”¨æˆ·
     public function register()
     {
         if (IS_POST) {
@@ -48,53 +48,54 @@ class UserController extends CommonController
             if ($rst === false) {
                 $this->error($rst->getError());
             }
-            $this->success('ÓÃ»§×¢²á³É¹¦', U('Index/index'));
+            $this->success('ç”¨æˆ·æ³¨å†ŒæˆåŠŸ', U('Index/index'));
+            //æ³¨å†Œåè‡ªåŠ¨ç™»å½•
             return;
         }
         $this->display();
     }
 
-//Éú³ÉÑéÖ¤Âë
+//ç”ŸæˆéªŒè¯ç 
     public function captcha()
     {
         $verify = new\Think\Verify();
         return $verify->entry();
     }
 
-//¼ì²éÑéÖ¤Âë
+//æ£€æŸ¥éªŒè¯ç 
     private function checkVerify($code, $id = '')
     {
         $verify = new \Think\Verify();
         $rst = $verify->check($code, $id);
         if ($rst !== true) {
-            $this->error('ÑéÖ¤ÂëÊäÈëÓĞÎó');
+            $this->error('éªŒè¯ç è¾“å…¥æœ‰è¯¯');
         }
     }
 
-    //¸öÈËÖĞĞÄÊ×Ò³
+    //ä¼šå‘˜ä¸­å¿ƒ
     public function index(){
         $this->display();
     }
 
-    //ĞŞ¸Ä¸öÈËÇ©Ãû
+    //ï¿½Ş¸Ä¸ï¿½ï¿½ï¿½Ç©ï¿½ï¿½
     public function signEdit(){
 
     }
 
-    //²é¿´¸öÈËÀ¸Ä¿
+    //ï¿½é¿´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
     public function column(){
         $mid=$this->userInfo['mid'];
         $data['column']=D('member')->getColumn($mid);
         $this->assign($data);
         $this->display();
     }
-    //ĞŞ¸ÄÀ¸Ä¿
+    //ï¿½Ş¸ï¿½ï¿½ï¿½Ä¿
     public function columnEdit(){
         if (IS_POST){
             $mid=$this->userInfo['mid'];
             $rst=$this->create('member','save',2,"mid=$mid");
             if ($rst===false){
-                $this->error('ĞŞ¸ÄÊ§°Ü');
+                $this->error('ï¿½Ş¸ï¿½Ê§ï¿½ï¿½');
             }
             $this->redirect('User/column');
             return;
