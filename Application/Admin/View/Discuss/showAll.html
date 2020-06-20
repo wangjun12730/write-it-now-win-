@@ -88,11 +88,10 @@
                                 <input class="check-all" type="checkbox" />
                             </th>
 
-                            <th>姓名</th>
-                            <th>电话</th>
-                            <th>密码</th>
+                            <th>名称</th>
                             <th>邮箱</th>
-                            <th>个性签名</th>
+                            <th>留言内容</th>
+                            <th>发表日期</th>
                         </tr>
                         </thead>
                         <tfoot>
@@ -112,16 +111,13 @@
                                 <td>
                                     <input type="checkbox" />
                                 </td>
-                                <td>{$user['name']}</td>
-                                <td><a href="#" title="title">{$user['tel']}</a></td>
-                                <td>{$user['pwd']}</td>
-                                <td>{$user['email']}</td>
-                                <td>{$user['per_signature']}</td>
+                                <td>{$user['poster']}</td>
+                                <td><a href="#" title="title">{$user['mail']}</a></td>
+                                <td>{$user['comment']}</td>
+                                <td>{$user['date']}</td>
                                 <td>
                                     <!-- Icons -->
-                                    <a  href="{:U('Admin/user/showUpdate',array('id'=>$user['id']))}" title="Edit">
-                                        <img src="__PUBLIC__/image/icons/pencil.png" alt="Edit" /></a>
-                                    <a href="{:U('Admin/user/del',array('id'=>$user['id']))}" title="Delete"><img src="__PUBLIC__/image/icons/cross.png" alt="Delete" /></a>
+                                    <a href="{:U('Admin/discuss/del',array('id'=>$user['id']))}" title="Delete"><img src="__PUBLIC__/image/icons/cross.png" alt="Delete" /></a>
              </td>
 
                             </tr>
