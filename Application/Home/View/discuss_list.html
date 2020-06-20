@@ -29,12 +29,6 @@
 			<p><?php echo $v['comment']; ?></p>
 			<p>发表日期：<?php echo $v['date']; ?></p>
 			<?php if($v['reply']!==''): ?>
-			<ul class="comment_reply">
-				<li>
-					<p>管理员回复：</p>
-					<p><?php echo $v['reply']; ?></p>
-				</li>
-			</ul>
 			<?php endIf; ?>
 		</li>
 		<?php endForeach; ?>
