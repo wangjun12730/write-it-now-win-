@@ -68,42 +68,196 @@
     }
 </script>
 <!--最新-->
-<div id="new">
-    <div class="col">最新发表</div>
-    <foreach name="new" item="v">
-        <ul class="newbook">
-            <li><a href="#1" target="_blank"><empty name="v.thumb"><img scr="#"><else/><img src="__PUBLIC__/image/preview.jpg"></empty></a></li>
-            <li class="bookname"><a href="#1" target="_blank">{$v.story_name}</a> </li>
-            <li class="content">{$v.content}</li>
-        </ul>
-    </foreach>
-</div>
-<div id="city">
-    <div class="col">都市</div>
-</div>
-<div id="romantic">
-    <div class="col">言情</div>
-</div>
-<div id="martial">
-    <div class="col">武侠</div>
-</div>
-<div id="fantasy">
-    <div class="col">玄幻</div>
-</div>
-<div id="ancient">
-    <div class="col">古风</div>
-</div>
-<div id="through">
-    <div class="col">穿越</div>
-</div>
-<div id="terror">
-    <div class="col">恐怖</div>
-</div>
-<div id="science">
-    <div class="col">科技</div>
-</div>
-<div id="inference">
-    <div class="col">推理</div>
+<div id="column">
+    <div class="col" id="new"><div class="colname"><aa>最新发表</aa></div><hr/>
+        <!--<foreach name="new" item="v">
+            <ul class="newbook">
+                <li><a href="#1" target="_blank"><empty name="v.thumb"><img scr="#"><else/><img src="__PUBLIC__/image/preview.jpg"></empty></a></li>
+                <li class="bookname"><a href="#1" target="_blank">{$v.story_name}</a> </li>
+                <li class="content">{$v.content}</li>
+            </ul>
+        </foreach>-->
+        <div class="bookshelf" name="new" item="v">
+            <ul>
+                <bb><a href="#">小说</a><i>(1110) </i></bb>
+                <bb><a href="#">文艺</a><i>(230) </i></bb>
+                <bb><a href="#">青春</a><i>(1430) </i></bb>
+                <bb><a href="#">少儿</a><i>(235) </i></bb>
+                <bb><a href="#">生活</a><i>(7809) </i></bb>
+                <bb><a href="#">社科</a><i>(876) </i></bb>
+                <bb><a href="#">管理</a><i>(1234) </i></bb>
+                <bb><a href="#">计算机</a><i>(2434) </i></bb>
+                <bb><a href="#">教育</a><i>(234) </i></bb>
+                <bb><a href="#">工具书</a><i>(7665) </i></bb>
+                <bb><a href="#">引进版</a><i>(4557) </i></bb>
+                <bb><a href="#">其他类</a><i>(4543) </i></bb>
+                <bb><a href="#">小说</a><i>(1110) </i></bb>
+                <bb><a href="#">文艺</a><i>(230) </i></bb>
+                <bb><a href="#">青春</a><i>(1430) </i></bb>
+                <bb><a href="#">少儿</a><i>(235) </i></bb>
+                <bb><a href="#">生活</a><i>(7809) </i></bb>
+                <bb><a href="#">社科</a><i>(876) </i></bb>
+                <bb><a href="#">管理</a><i>(1234) </i></bb>
+                <bb><a href="#">计算机</a><i>(2434) </i></bb>
+                <bb><a href="#">教育</a><i>(234) </i></bb>
+                <bb><a href="#">工具书</a><i>(7665) </i></bb>
+                <bb><a href="#">引进版</a><i>(4557) </i></bb>
+                <bb><a href="#">其他类</a><i>(4543) </i></bb>
+                <bb><a href="#">小说</a><i>(1110) </i></bb>
+                <bb><a href="#">文艺</a><i>(230) </i></bb>
+                <bb><a href="#">青春</a><i>(1430) </i></bb>
+                <bb><a href="#">少儿</a><i>(235) </i></bb>
+                <bb><a href="#">生活</a><i>(7809) </i></bb>
+                <bb><a href="#">社科</a><i>(876) </i></bb>
+                <bb><a href="#">管理</a><i>(1234) </i></bb>
+                <bb><a href="#">计算机</a><i>(2434) </i></bb>
+                <bb><a href="#">教育</a><i>(234) </i></bb>
+                <bb><a href="#">工具书</a><i>(7665) </i></bb>
+                <bb><a href="#">引进版</a><i>(4557) </i></bb>
+                <bb><a href="#">其他类</a><i>(4543) </i></bb>
+                <bb><a href="#">小说</a><i>(1110) </i></bb>
+                <bb><a href="#">文艺</a><i>(230) </i></bb>
+                <bb><a href="#">青春</a><i>(1430) </i></bb>
+                <bb><a href="#">少儿</a><i>(235) </i></bb>
+                <bb><a href="#">生活</a><i>(7809) </i></bb>
+                <bb><a href="#">社科</a><i>(876) </i></bb>
+                <bb><a href="#">管理</a><i>(1234) </i></bb>
+                <bb><a href="#">计算机</a><i>(2434) </i></bb>
+                <bb><a href="#">教育</a><i>(234) </i></bb>
+                <bb><a href="#">工具书</a><i>(7665) </i></bb>
+                <bb><a href="#">引进版</a><i>(4557) </i></bb>
+                <bb><a href="#">其他类</a><i>(4543) </i></bb>
+                <bb><a href="#">小说</a><i>(1110) </i></bb>
+                <bb><a href="#">文艺</a><i>(230) </i></bb>
+                <bb><a href="#">青春</a><i>(1430) </i></bb>
+                <bb><a href="#">少儿</a><i>(235) </i></bb>
+                <bb><a href="#">生活</a><i>(7809) </i></bb>
+                <bb><a href="#">社科</a><i>(876) </i></bb>
+                <bb><a href="#">管理</a><i>(1234) </i></bb>
+                <bb><a href="#">计算机</a><i>(2434) </i></bb>
+                <bb><a href="#">教育</a><i>(234) </i></bb>
+                <bb><a href="#">工具书</a><i>(7665) </i></bb>
+                <bb><a href="#">引进版</a><i>(4557) </i></bb>
+                <bb><a href="#">其他类</a><i>(4543) </i></bb>
+                <bb><a href="#">小说</a><i>(1110) </i></bb>
+                <bb><a href="#">文艺</a><i>(230) </i></bb>
+                <bb><a href="#">青春</a><i>(1430) </i></bb>
+                <bb><a href="#">少儿</a><i>(235) </i></bb>
+                <bb><a href="#">生活</a><i>(7809) </i></bb>
+                <bb><a href="#">社科</a><i>(876) </i></bb>
+                <bb><a href="#">管理</a><i>(1234) </i></bb>
+                <bb><a href="#">计算机</a><i>(2434) </i></bb>
+                <bb><a href="#">教育</a><i>(234) </i></bb>
+                <bb><a href="#">工具书</a><i>(7665) </i></bb>
+                <bb><a href="#">引进版</a><i>(4557) </i></bb>
+                <bb><a href="#">其他类</a><i>(4543) </i></bb>
+                <bb><a href="#">小说</a><i>(1110) </i></bb>
+                <bb><a href="#">文艺</a><i>(230) </i></bb>
+                <bb><a href="#">青春</a><i>(1430) </i></bb>
+                <bb><a href="#">少儿</a><i>(235) </i></bb>
+                <bb><a href="#">生活</a><i>(7809) </i></bb>
+                <bb><a href="#">社科</a><i>(876) </i></bb>
+                <bb><a href="#">管理</a><i>(1234) </i></bb>
+                <bb><a href="#">计算机</a><i>(2434) </i></bb>
+                <bb><a href="#">教育</a><i>(234) </i></bb>
+                <bb><a href="#">工具书</a><i>(7665) </i></bb>
+                <bb><a href="#">引进版</a><i>(4557) </i></bb>
+                <bb><a href="#">其他类</a><i>(4543) </i></bb>
+                <bb><a href="#">小说</a><i>(1110) </i></bb>
+                <bb><a href="#">文艺</a><i>(230) </i></bb>
+                <bb><a href="#">青春</a><i>(1430) </i></bb>
+                <bb><a href="#">少儿</a><i>(235) </i></bb>
+                <bb><a href="#">生活</a><i>(7809) </i></bb>
+                <bb><a href="#">社科</a><i>(876) </i></bb>
+                <bb><a href="#">管理</a><i>(1234) </i></bb>
+                <bb><a href="#">计算机</a><i>(2434) </i></bb>
+                <bb><a href="#">教育</a><i>(234) </i></bb>
+                <bb><a href="#">工具书</a><i>(7665) </i></bb>
+                <bb><a href="#">引进版</a><i>(4557) </i></bb>
+                <bb><a href="#">其他类</a><i>(4543) </i></bb>
+                <bb><a href="#">小说</a><i>(1110) </i></bb>
+                <bb><a href="#">文艺</a><i>(230) </i></bb>
+                <bb><a href="#">青春</a><i>(1430) </i></bb>
+                <bb><a href="#">少儿</a><i>(235) </i></bb>
+                <bb><a href="#">生活</a><i>(7809) </i></bb>
+                <bb><a href="#">社科</a><i>(876) </i></bb>
+                <bb><a href="#">管理</a><i>(1234) </i></bb>
+                <bb><a href="#">计算机</a><i>(2434) </i></bb>
+                <bb><a href="#">教育</a><i>(234) </i></bb>
+                <bb><a href="#">工具书</a><i>(7665) </i></bb>
+                <bb><a href="#">引进版</a><i>(4557) </i></bb>
+                <bb><a href="#">其他类</a><i>(4543) </i></bb>
+                <bb><a href="#">小说</a><i>(1110) </i></bb>
+                <bb><a href="#">文艺</a><i>(230) </i></bb>
+                <bb><a href="#">青春</a><i>(1430) </i></bb>
+
+
+
+
+            </ul>
+            <div id="divBot">
+                <span><a href="#">更多</a></span><i class="fa fa-sort-up" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col" id="city"><div class="colname"><aa>都市</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="romantic"><div class="colname"><aa>言情</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="martial"><div class="colname"><aa>武侠</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="fantasy"><div class="colname"><aa>玄幻</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="ancient"><div class="colname"><aa>古风</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="through"><div class="colname"><aa>穿越</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="terror"><div class="colname"><aa>恐怖</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="science"><div class="colname"><aa>科技</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="inference"><div class="colname"><aa>推理</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="suspense"><div class="colname"><aa>悬疑</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="BL"><div class="colname"><aa>耽美</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="history"><div class="colname"><aa>历史</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="military"><div class="colname"><aa>军事</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <div class="col" id="end"><div class="colname"><aa>完结</aa></div><hr>
+        <div class="bookshelf"></div>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('bb:gt(3)').not(':last').hide();
+            $('#divBot span>a').click(function () {
+
+                if ($('#divBot span>a').text() == '更多') {
+                    $('#divBot span>a').text('收回');
+                    $('bb:gt(3)').show(2000);
+                } else {
+                    $('#divBot span>a').text('更多');
+                    $('bb:gt(3)').hide(2000);
+                }
+            })
+        })
+    </script>
 </div>
 </body>
 </html>

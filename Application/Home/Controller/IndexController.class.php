@@ -19,7 +19,10 @@ class IndexController extends CommonController {
     }
     public function shouye(){
         
-        
+
+        $this->display();
+    }
+    public function bookshelf(){
         $this->display();
     }
 
