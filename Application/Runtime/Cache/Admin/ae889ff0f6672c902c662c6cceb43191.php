@@ -29,8 +29,8 @@
     </div>
     <div id="content">
         <div class="item">
-<div class="title1" style="color:#09C;font-weight:bold;">用户管理</div>
 
+<div class="title1" style="color:#09C;font-weight:bold;">用户管理</div>
 <div class="showAllUser">
     <div  style="margin-bottom: 30px;margin-top: 20px" >
         <a class="btn btn-warning">用户列表</a>
@@ -62,7 +62,6 @@
                     </div></td>
                     <td style="padding-top: 20px "><?php echo ($v["is_ban"]); ?></td>
                     <td style="padding-top: 15px "><a  class="btn btn-primary ban"  data-toggle="modal" data-target="#myModal">封禁</a></td>
-
                 </tr><?php endforeach; endif; ?>
         </table><?php endif; ?>
 <!-- 封禁时间模态框 -->

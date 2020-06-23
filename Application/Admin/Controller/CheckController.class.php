@@ -9,11 +9,13 @@ class CheckController extends Controller
         $model = M('StoriesCheck');
         $result = $model->where("is_check = '0'")->order('time desc')->select();
         if($result){
+            $_SESSION['checking'] = count($result);  //设置checking会话变量的值为查询数
             for($i=0;$i<count($result);$i++) {
                 @$result[$i]['content'] = htmlspecialchars($result[$i]['content']);
             }
             $this->assign('result',$result);
         }else{
+            $_SESSION['checking'] = 0;   //设置checking会话变量的值为查询数
             $this->assign('empty',1);
         }
         $this->display();
@@ -43,6 +45,7 @@ class CheckController extends Controller
         $data = array("title"=>$result1['title'],"section"=>$result1['section'],"content"=>$result1['content'],"story_id"=>$result1['story_id'],"story_name"=>$result1['story_name'],"user_id"=>$result1['user_id'],"user_name"=>$result1['user_name'],"update_time"=>$result1['time']);
         $res = $model->add($data);
         if($res){
+            $_SESSION['checking'] -=  1; //checking会话变量减一
             //给用户发送通知内容(添加内容进用户消息数据表)
             $data2 = array("type"=>"通知","content"=>"您好，您".$result1['type']."的\"".$result1['story_name']."\"".$result1['section']."已审核通过","user_id"=>$result1['user_id'],"send_man"=>"管理员");
             $result2 = M('messages')->add($data2);
@@ -64,6 +67,7 @@ class CheckController extends Controller
         $data = array("title"=>$result1['title'],"id"=>$result1['section_id'],"section"=>$result1['section'],"content"=>$result1['content'],"story_id"=>$result1['story_id'],"story_name"=>$result1['story_name'],"user_id"=>$result1['user_id'],"user_name"=>$result1['user_name'],"update_time"=>$result1['time']);
         $res = $model->save($data);
         if($res){
+            $_SESSION['checking'] -=  1; //checking会话变量减一
             //给用户发送通知内容(更新内容进用户消息数据表)
             $data2 = array("type"=>"通知","content"=>"您好，您".$result1['type']."的\"".$result1['story_name']."\"".$result1['section']."已审核通过","user_id"=>$result1['user_id'],"send_man"=>"管理员");
             $result2 = M('messages')->add($data2);
@@ -100,6 +104,7 @@ class CheckController extends Controller
         //设置审核表中相关内容已被审核
         $result1 =M('stories_check')->where("id=".$id)->setField('is_check',"1");//删除记录
         if($result1 and $result2){
+            $_SESSION['checking'] -=  1; //checking会话变量减一
             $this->success('成功！',U('Check/checkList'),1);
         }else{
             $this->error('失败！','',1);

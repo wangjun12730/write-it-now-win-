@@ -328,7 +328,11 @@
 
 
     <script>
-        $("#form_pwd").submit(function(){ //表单提交时判断
+        $("#form_pwd").submit(function(){ //修改密码时表单提交时判断两次输入的面是否一致
+            if($("#pwd").val() === ''  ){
+                alert('新密码不能为空!');
+                return false;
+            };
             if($("#pwd").val() !== $("#apwd").val()){
                 alert('输入的新密码和确认密码不一致！');
                 return false;

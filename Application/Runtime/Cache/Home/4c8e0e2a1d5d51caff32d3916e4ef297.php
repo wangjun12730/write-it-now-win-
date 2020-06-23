@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="/win/write-it-now-win-/Public/css/layout.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/win/write-it-now-win-/Public/css/font-awesome.min.css">
+    <link href="/write-it-now-win-/Public/css/layout.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/write-it-now-win-/Public/css/font-awesome.min.css">
 </head>
 <body>
 <!--标签栏-->
@@ -71,7 +71,7 @@
 <div id="column">
     <div class="col" id="new"><div class="colname"><aa>最新发表</aa></div><hr/>
         <!--<?php if(is_array($new)): foreach($new as $key=>$v): ?><ul class="newbook">
-                <li><a href="#1" target="_blank"><?php if(empty($v["thumb"])): ?><img scr="#"><?php else: ?><img src="/win/write-it-now-win-/Public/image/preview.jpg"><?php endif; ?></a></li>
+                <li><a href="#1" target="_blank"><?php if(empty($v["thumb"])): ?><img scr="#"><?php else: ?><img src="/write-it-now-win-/Public/image/preview.jpg"><?php endif; ?></a></li>
                 <li class="bookname"><a href="#1" target="_blank"><?php echo ($v["story_name"]); ?></a> </li>
                 <li class="content"><?php echo ($v["content"]); ?></li>
             </ul><?php endforeach; endif; ?>-->
@@ -240,7 +240,7 @@
     <div class="col" id="end"><div class="colname"><aa>完结</aa></div><hr>
         <div class="bookshelf"></div>
     </div>
-    <script type="text/javascript" src="/win/write-it-now-win-/Public/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="/write-it-now-win-/Public/js/jquery-1.12.4.js"></script>
     <script type="text/javascript">
         $(function () {
             $('bb:gt(3)').not(':last').hide();

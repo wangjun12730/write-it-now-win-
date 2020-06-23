@@ -132,9 +132,9 @@
                 <?php echo ($result["content"]); ?>
             </p>
             <div class="text-center" style="margin-top: 50px">
-                <button class="btn btn-danger" style="margin-right: 30px" onclick="location='/write-it-now-win-/Home/StoryShow/authourStoryDetail/section_id/<?php echo ($pre); ?>'">上一章</button>
+                <button class="btn btn-danger" style="margin-right: 30px" onclick="location='/write-it-now-win-/Home/StoryShow/authourStoryDetail/section_id/<?php echo ($pre); ?>'"><?php echo ($pre_section); ?></button>
                 <button class="btn btn-danger" style="margin-right: 30px" onclick="location='/write-it-now-win-/Home/StoryShow/authourStoryShow/s_id/<?php echo ($story["id"]); ?>'">目录</button>
-                <button class="btn btn-danger" style="margin-right: 30px" onclick="location='/write-it-now-win-/Home/StoryShow/authourStoryDetail/section_id/<?php echo ($next); ?>'">下一章</button>
+                <button class="btn btn-danger" style="margin-right: 30px" onclick="location='/write-it-now-win-/Home/StoryShow/authourStoryDetail/section_id/<?php echo ($next); ?>'"><?php echo ($next_section); ?></button>
             </div>
         </div>
     </div>
