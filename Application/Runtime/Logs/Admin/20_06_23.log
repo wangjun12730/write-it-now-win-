@@ -1,0 +1,6 @@
+[ 2020-06-23T23:30:29+08:00 ] ::1 /write-it-now-win-/Admin/Index/alterPwdOk
+ERR: 非法数据对象！:[0=>id=4]
+
+[ 2020-06-23T23:32:17+08:00 ] ::1 /write-it-now-win-/Admin/Index/Admin/Index/index
+ERR: 非法操作:Admin
+

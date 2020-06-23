@@ -1,0 +1,49 @@
+<div class="title1" style="color:#09C;font-weight:bold;">审核列表</div>
+
+<div class="check">
+
+    <div  style="margin-bottom: 30px;margin-top: 20px" >
+        <a class="btn btn-primary" href="__CONTROLLER__/checkList">未审核</a><a class="btn btn-warning" style="margin-left: 10px">已审核</a>
+    </div>
+    <if condition="$empty==1">
+        <h3>现在还没有已审核的信息</h3>
+    <else />
+        <table class="table table-striped table-hover table-condensed">
+            <tr>
+                <th>id</th>
+                <th>小说名</th>
+                <th>作者</th>
+                <th>章节</th>
+                <th>标题</th>
+                <th>内容</th>
+                <th>时间</th>
+                <th>类型</th>
+                <th>审核</th>
+                <th></th>
+            </tr>
+            <foreach name="result" item="v">
+                <tr>
+                    <td>{$v.id}</td>
+                    <td>{$v.story_name}</td>
+                    <td>{$v.user_name}</td>
+                    <td>{$v.section}</td>
+                    <td>{$v.title}</td>
+                    <td><div   data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$v.content}" title="审核内容" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;width:145px;">
+                        {$v.content}
+                    </div></td>
+                    <td>{$v.time}</td>
+                    <td>{$v.type}</td>
+                    <td>
+                       已审核
+                    </td>
+                    <td><a class="btn btn-primary" href="__CONTROLLER__/deleteCheck/c_id/{$v.id}">删除</a></td>
+                </tr>
+            </foreach>
+        </table>
+    </if>
+</div>
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>

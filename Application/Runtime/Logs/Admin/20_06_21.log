@@ -1,0 +1,21 @@
+[ 2020-06-21T00:10:10+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkNot
+ERR: 非法操作:Check
+
+[ 2020-06-21T00:11:14+08:00 ] ::1 /write-it-now-win-/Admin/Check/Check/checkNot
+ERR: 非法操作:Check
+
+[ 2020-06-21T15:11:42+08:00 ] ::1 /write-it-now-win-/Admin/Check/index.php
+ERR: 非法操作:index.php
+
+[ 2020-06-21T18:03:33+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkUpedateIs/c_id/$c_id.html
+ERR: 非法操作:checkUpedateIs
+
+[ 2020-06-21T18:04:09+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkUpedateIs/c_id/$c_id.html
+ERR: 非法操作:checkUpedateIs
+
+[ 2020-06-21T18:04:17+08:00 ] ::1 /write-it-now-win-/Admin/Check/checkUpdateIs/c_id/21.html
+ERR: 非法数据对象！:[section_id=>5]
+
+[ 2020-06-21T22:43:14+08:00 ] ::1 /write-it-now-win-/Admin/User/showBanUser
+ERR: 模板不存在:./Application/Admin/View/User/showBanUser.html
+

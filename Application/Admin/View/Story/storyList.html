@@ -1,0 +1,77 @@
+<div class="title1" style="color:#09C;font-weight:bold;">栏目管理</div>
+
+<div class="searchUser">
+    <div  style="margin-bottom: 30px;margin-top: 20px" >
+        <a class="btn btn-warning" >栏目列表</a>
+        <a class="btn btn-primary"  href="__CONTROLLER__/searchStory">搜索栏目</a>
+    </div>
+
+
+    <div class="content">
+        <if condition="$empty==1">
+            <h3>现在还没有用户创建小说栏目</h3>
+        <else />
+            <table class="table table-striped table-hover table-condensed" style="margin-top: 30px">
+                <tr>
+                    <th>id</th>
+                    <th>图片</th>
+                    <th>栏目名</th>
+                    <th>简介</th>
+                    <th>标签</th>
+                    <th>作者id</th>
+                    <th>作者姓名</th>
+                    <th>创建时间</th>
+                </tr>
+                <foreach name="res" item="v">
+                        <tr>
+                            <td style="padding-top: 20px">{$v.id}</td>
+                            <td><img src="__PUBLIC__/{$v.picture}" style="width: 50px;height: 50px"></td>
+                            <td style="padding-top: 20px"><a href="__CONTROLLER__/storyDetail/s_id/{$v.id}">{$v.name}</a></td>
+                            <td style="padding-top: 20px "><div   data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$v.info}" title="个性签名" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;width:145px;">
+                                {$v.info}
+                            </div></td>
+                            <td style="padding-top: 20px">{$v.tag}</td>
+                            <td style="padding-top: 20px">{$v.user_id}</td>
+                            <td style="padding-top: 20px">{$v.user_name}</td>
+                            <td style="padding-top: 20px">{$v.create_time}</td>
+                        </tr>
+                </foreach>
+            </table>
+        </if>
+    </div>
+
+    <!-- 封禁时间模态框 -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">请选择封禁时间</h4>
+                </div>
+                <form action="__CONTROLLER__/banUser" method="post">
+                    <div class="modal-body">
+                        <input type="datetime-local" name="ban_time" />
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" id="id" name="id" />
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="submit" class="btn btn-primary ">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        });
+        $(document).ready(function () {
+            $(".ban").click(function () {
+                $("#id").val($(this).parent().parent().find("td").eq(0).text());
+            });
+        });
+    </script>
+</div>
