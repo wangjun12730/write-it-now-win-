@@ -1,15 +1,24 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <title>WIN网站</title>
     <link href="/write-it-now-win-/Public/css/home.css" rel="stylesheet" />
     <script src="/write-it-now-win-/Public/js/jquery.min.js"></script>
+=======
+    <title>write it now!</title>
+    <link href="/win/write-it-now-win-/Public/css/layout.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/win/write-it-now-win-/Public/css/font-awesome.min.css">
+>>>>>>> 2d46a9d68ea6e09fa3ecfb5ffe5906c363c2d768
 </head>
 <body>
+<!--顶部-->
 <div id="top">
     <div class="top_nav">
+<<<<<<< HEAD
         <ul><li>收藏本站</li><li>关注本站</li></ul>
         <ul class="right">
             <?php if(isset($mid)): ?><li><?php echo ($mname); ?>，欢迎来到WIN网站！[<a href="/write-it-now-win-/Home/User/logout">退出</a>]<li>
@@ -43,15 +52,44 @@
 
         </li><li class="curr"><a href="/write-it-now-win-/">首页</a></li>
             </li><li class="curr"><a href="/write-it-now-win-/">讨论区</a></li>
+=======
+        <ul class="left">
+            <?php if(isset($mid)): ?><li><a href="/win/write-it-now-win-/Home/User/index"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Hello，<?php echo ($mname); ?>！[<a href="/win/write-it-now-win-/Home/User/logout">退出</a>]<li>
+                <?php else: ?>
+                <li>Hello！[<a href="/win/write-it-now-win-/Home/User/login">登录</a>][<a href="/win/write-it-now-win-/Home/User/register">免费注册</a>]</li><?php endif; ?>
+        </ul>
+        <ul class="right">
+            <li><a href="#"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></li>
         </ul>
     </div>
-    <!DOCTYPE html>
+</div>
+
+<!--选项-->
+<div id="option">
+    <section class="center">
+        <ul class="link">
+            <li class="z"><a href="/win/write-it-now-win-/Home/Index/shouye" target="myiframe">首页</a></li>
+            <li class="line">|</li>
+            <li class="z"><a href="/win/write-it-now-win-/Home/Iframe/discuss_list" target="myiframe">讨论</a></li>
+>>>>>>> 2d46a9d68ea6e09fa3ecfb5ffe5906c363c2d768
+        </ul>
+    </section>
+</div>
+<!--内嵌框架-->
+<section>
+    <iframe src="/win/write-it-now-win-/Home/Index/shouye" name="myiframe" scrolling="yes"> </iframe>
+</section>
+
+
+<!--footer-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>分类导航</title>
+    <title>Title</title>
 </head>
 <body>
+<<<<<<< HEAD
 <div id="slide">
     <?php if(is_array($cate)): $i = 0; $__LIST__ = array_slice($cate,0,9,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><div class="cate">
         <div class="cate1 left"><a href="/write-it-now-win-/Home/Index/find/cid/<?php echo ($v1["cid"]); ?>"><?php echo ($v1["cname"]); ?></a> </div>
@@ -123,5 +161,13 @@
 
 
 >>>>>>> 0d0198c323c18c2cdcef48a971c3e1f4abc33d93
+=======
+
+</body>
+</html>
+
+<footer><p>write it now!</p>
+    <p>win</p></footer>
+>>>>>>> 2d46a9d68ea6e09fa3ecfb5ffe5906c363c2d768
 </body>
 </html>

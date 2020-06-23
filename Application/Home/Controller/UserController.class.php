@@ -108,7 +108,7 @@ class UserController extends Controller
         $this->display();
     }
 
-   //创建栏目
+    //创建栏目
     public function createStory(){
         if(IS_POST){
             $model = M('stories_1000');

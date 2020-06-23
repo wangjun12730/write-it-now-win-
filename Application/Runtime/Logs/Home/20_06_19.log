@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [ 2020-06-19T00:16:54+08:00 ] ::1 /write-it-now-win-/Home/Message/messageList
 ERR: 无法加载控制器:Message
 
@@ -135,4 +136,131 @@ ERR: 非法操作:createStory
 
 [ 2020-06-19T23:23:21+08:00 ] ::1 /write-it-now-win-/Home/StoryShow/createSection
 ERR: Think\Controller:seccess方法不存在！
+=======
+[ 2020-06-19T12:42:27+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/talk.html
+ERR: 无法加载控制器:Application
+
+[ 2020-06-19T13:40:25+08:00 ] ::1 /win/write-it-now-win-/Home/View/layout
+ERR: 无法加载控制器:View
+
+[ 2020-06-19T13:40:31+08:00 ] ::1 /win/write-it-now-win-/Home/View/layout.html
+ERR: 无法加载控制器:View
+
+[ 2020-06-19T13:46:08+08:00 ] ::1 /win/write-it-now-win-/Home/Index/index.oho
+ERR: 非法操作:index.oho
+
+[ 2020-06-19T13:46:13+08:00 ] ::1 /win/write-it-now-win-/Home/Index/index.php
+ERR: 非法操作:index.php
+
+[ 2020-06-19T14:08:17+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T14:55:06+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T14:56:19+08:00 ] ::1 /win/write-it-now-win-/__Public__/css/font-awesome.min.css
+ERR: 无法加载控制器:__Public__
+
+[ 2020-06-19T14:56:19+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T14:56:19+08:00 ] ::1 /win/write-it-now-win-/__Public__/css/layout.css
+ERR: 无法加载控制器:__Public__
+
+[ 2020-06-19T14:56:20+08:00 ] ::1 /win/write-it-now-win-/__Public__/css/font-awesome.min.css
+ERR: 无法加载控制器:__Public__
+
+[ 2020-06-19T14:56:20+08:00 ] ::1 /win/write-it-now-win-/__Public__/css/layout.css
+ERR: 无法加载控制器:__Public__
+
+[ 2020-06-19T14:56:20+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T14:56:21+08:00 ] ::1 /win/write-it-now-win-/__Public__/css/font-awesome.min.css
+ERR: 无法加载控制器:__Public__
+
+[ 2020-06-19T14:56:21+08:00 ] ::1 /win/write-it-now-win-/__Public__/css/layout.css
+ERR: 无法加载控制器:__Public__
+
+[ 2020-06-19T14:56:21+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T14:56:43+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T15:10:22+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T15:10:24+08:00 ] ::1 /win/write-it-now-win-/discuss_list.html
+ERR: 无法加载控制器:Discuss_list
+
+[ 2020-06-19T15:10:49+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/Public/css/home.css
+ERR: 无法加载控制器:Application
+
+[ 2020-06-19T15:18:34+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T15:18:37+08:00 ] ::1 /win/write-it-now-win-/Home/Iframe/discuss_list
+ERR: 无法加载控制器:Iframe
+
+[ 2020-06-19T15:18:39+08:00 ] ::1 /win/write-it-now-win-/Home/Iframe/shouye
+ERR: 无法加载控制器:Iframe
+
+[ 2020-06-19T15:18:41+08:00 ] ::1 /win/write-it-now-win-/Home/Iframe/shouye
+ERR: 无法加载控制器:Iframe
+
+[ 2020-06-19T15:25:00+08:00 ] ::1 /win/write-it-now-win-/Home/Iframe/discuss_list
+ERR: 无法加载控制器:Iframe
+
+[ 2020-06-19T15:25:02+08:00 ] ::1 /win/write-it-now-win-/Home/Iframe/discuss_list
+ERR: 无法加载控制器:Iframe
+
+[ 2020-06-19T15:25:05+08:00 ] ::1 /win/write-it-now-win-/Home/Iframe/shouye
+ERR: 无法加载控制器:Iframe
+
+[ 2020-06-19T15:32:03+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T15:47:15+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T15:47:39+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T15:47:39+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T15:47:40+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T15:47:40+08:00 ] ::1 /win/write-it-now-win-/shouye.html
+ERR: 无法加载控制器:Shouye
+
+[ 2020-06-19T16:37:16+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/Index/__PUBLIC__/css/layout.css
+ERR: 无法加载控制器:Application
+
+[ 2020-06-19T16:37:16+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/Index/__PUBLIC__/css/font-awesome.min.css
+ERR: 无法加载控制器:Application
+
+[ 2020-06-19T17:21:52+08:00 ] ::1 /win/write-it-now-win-/index.php/Home/INDEX/index
+ERR: 无法加载控制器:INDEX
+
+[ 2020-06-19T17:27:15+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/__PUBLIC__/css/font-awesome.min.css
+ERR: 无法加载控制器:Application
+
+[ 2020-06-19T17:27:15+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/__PUBLIC__/css/layout.css
+ERR: 无法加载控制器:Application
+
+[ 2020-06-19T17:27:15+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/__MODULE__/Index/shouye.html
+ERR: 无法加载控制器:Application
+
+[ 2020-06-19T17:44:46+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/__PUBLIC__/css/layout.css
+ERR: 无法加载控制器:Application
+
+[ 2020-06-19T17:44:46+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/__MODULE__/Index/shouye
+ERR: 无法加载控制器:Application
+
+[ 2020-06-19T17:44:46+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/__PUBLIC__/css/font-awesome.min.css
+ERR: 无法加载控制器:Application
+>>>>>>> 2d46a9d68ea6e09fa3ecfb5ffe5906c363c2d768
 

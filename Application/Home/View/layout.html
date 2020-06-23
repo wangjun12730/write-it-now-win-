@@ -1,100 +1,49 @@
+{__NOLAYOUT__}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-<<<<<<< HEAD
-    <title>WIN网站</title>
-    <link href="__PUBLIC__/css/home.css" rel="stylesheet" />
-    <script src="__PUBLIC__/js/jquery.min.js"></script>
-</head>
-<body>
-<div id="top">
-    <div class="top_nav">
-        <ul><li>收藏本站</li><li>关注本站</li></ul>
-        <ul class="right">
-            <present name="mid">
-                <li>{$mname}，欢迎来到WIN网站！[<a href="__MODULE__/User/logout">退出</a>]<li>
-                <else/>
-                <li>您好，欢迎来到WIN网站！[<a href="__MODULE__/User/login">登录</a>][<a href="__MODULE__/User/register">免费注册</a>]</li>
-            </present>
-            <li class="line">|</li><li>个人中心</li>
-            <li class="line">|</li><li><a href="__MODULE__/User/index">个人中心</a></li>
-            <li class="line">|</li><li><a href="__MODULE__/User/column">我的栏目</a></li>
-            <li class="line">|</li><li>联系客服</li>
-        </ul>
-    </div>
-</div>
-<div id="box">
-    <div id="header">
-        <a class="left" href="__APP__/"><div id="logo"></div></a>
-        <div id="search" class="left">
-            <input type="text" class="left" />
-            <input class="search_btn" type="button" value="搜索" />
-            <p id="search_hot">热门搜索：言情  悬疑  恐怖  完结</p>
-        </div>
-        <div id="info" class="left">
-            <input type="button" value="个人中心" onclick="location.href='__MODULE__/User/index'" />
-        </div>
-    </div>
-    <div class="clear"></div>
-    <div id="nav">
-        <ul><li class="category"><a href="#">全部分类</a>
-            <!--标签按钮（补充一下）-->
-            <!--<li><a href="#">悬疑</a></li><li><a href="#">都市</a></li><li><a href="#">玄幻</a></li>-->
-            <!--<li><a href="#">恐怖</a></li><li><a href="#">言情</a></li><li><a href="#">科技</a></li> -->
-
-        </li><li class="curr"><a href="__APP__/">首页</a></li>
-            </li><li class="curr"><a href="__APP__/">讨论区</a></li>
-        </ul>
-    </div>
-    {__CONTENT__}
-    <div id="service">
-        <ul><li>购物指南</li><li>配送方式</li><li>支付方式</li>
-            <li>售后服务</li><li>特色服务</li><li>网络服务</li>
-        </ul>
-        <div class="clear"></div>
-    </div>
-    <div id="footer">WIN网站</div>
-</div>
-=======
     <title>write it now!</title>
-    <link href="../../../Public/css/layout.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../../Public/css/font-awesome.min.css">
+    <link href="__PUBLIC__/css/layout.css" rel="stylesheet" />
+    <link rel="stylesheet" href="__PUBLIC__/css/font-awesome.min.css">
 </head>
 <body>
 <!--顶部-->
-    <div id="top">
-        <div class="top_nav">
-            <ul class="left">
-                <present name="mid">
-                    <li>Hello，{$mname}！[<a href="__MODULE__/User/logout">退出</a>]<li>
-                    <else/>
-                    <li>Hello！[<a href="__MODULE__/User/login">登录</a>][<a href="__MODULE__/User/register">免费注册</a>]</li>
-                </present>
-            </ul>
-            <ul class="right">
-                <li><a href="#"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
+<div id="top">
+    <div class="top_nav">
+        <ul class="left">
+            <present name="mid">
+                <li><a href="__MODULE__/User/index"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Hello，{$mname}！[<a href="__MODULE__/User/logout">退出</a>]<li>
+                <else/>
+                <li>Hello！[<a href="__MODULE__/User/login">登录</a>][<a href="__MODULE__/User/register">免费注册</a>]</li>
+            </present>
+        </ul>
+        <ul class="right">
+            <li><a href="#"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></li>
+        </ul>
     </div>
+</div>
 
 <!--选项-->
 <div id="option">
     <section class="center">
         <ul class="link">
-            <li class="z"><a href="shouye.html" target="myiframe">首页</a></li>
+            <li class="z"><a href="__MODULE__/Index/shouye" target="myiframe">首页</a></li>
             <li class="line">|</li>
-            <li class="z"><a href="talk.html" target="myiframe">讨论</a></li>
+            <li class="z"><a href="__MODULE__/Iframe/discuss_list" target="myiframe">讨论</a></li>
         </ul>
     </section>
 </div>
 <!--内嵌框架-->
 <section>
-    <iframe src="shouye.html" name="myiframe" scrolling="yes"> </iframe>
+    <iframe src="__MODULE__/Index/shouye" name="myiframe" scrolling="yes"> </iframe>
 </section>
 
 
+<!--footer-->
+{__CONTENT__}
 
->>>>>>> 0d0198c323c18c2cdcef48a971c3e1f4abc33d93
+<footer><p>write it now!</p>
+    <p>win</p></footer>
 </body>
 </html>

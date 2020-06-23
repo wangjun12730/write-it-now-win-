@@ -14,9 +14,16 @@ class IndexController extends CommonController {
 //            'recycle'=>'no',     //不在回收站中
 //        ))->limit(5)->select();
         //视图
-//        $this->assign($data);
+
         $this->display();
     }
+    public function shouye(){
+        
 
+        $this->display();
+    }
+    public function bookshelf(){
+        $this->display();
+    }
 
 }
