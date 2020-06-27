@@ -7,7 +7,7 @@ h1{font-size:24px;}
 .right{float:right;}
 #box{width:800px;margin:0 auto;margin-top:30px;}
 #main{margin:30px auto;border:3px solid #E8E8E8;background:#fff;padding:40px;}
-.login-ad{width:320px;height:250px;background:url(../image/ad01.jpg);}
+.login-ad{width:200px;height:250px;background:url(../image/ad01.jpg);}
 .register-ad{width:320px;height:250px;background:url(../image/ad01.jpg);}
 .login{width:350px;}
 th{text-align:right;}
