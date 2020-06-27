@@ -3,7 +3,6 @@ body{color:#555;min-width:592px;overflow:hidden;}
 ul{list-style:none;}
 a{color:#07A;text-decoration:none;}
 a:hover{;text-decoration:underline;}
-
 .left{float:left;}
 .right{float:right;}
 .clear{clear:both;}
@@ -31,9 +30,6 @@ a:hover{;text-decoration:underline;}
 #menu li{margin-bottom:5px;}
 #menu a{display:block;text-decoration:none;color:#555;padding:4px;text-indent:30px;}
 #menu a:hover{background:#EAF4FB;color:#2366A8;}
-.active{
-    background:#EAF4FB;color:#2366A8;
-}
 #menu .curr{background:#DEEFFA!important;color:#555!important;}
 #content{position:absolute;top: 0px;right:0px;left:161px;bottom:0;overflow-y:auto;background:#fff;border-left:1px solid #B5CFD9;box-shadow:0px 8px 12px #DEEFFA inset;}
 #content .item{line-height:40px;margin-top:18px;margin-left:25px;margin-bottom:30px;}

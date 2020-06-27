@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-{__NOLAYOUT__}
+{__NOLAYOUT__}<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,8 +13,8 @@
         <div class="login-ad left">广告位</div>
         <form method="post">
             <table class="login right">
-                <tr><th>用户名：</th><td><input type="text" name="tel" placeholder="用户注册电话号码" /></td></tr>
-                <tr><th>密码：</th><td><input type="password" name="pwd" placeholder="请输入密码" /></td></tr>
+                <tr><th>用户名：</th><td><input type="text" name="user" /></td></tr>
+                <tr><th>密码：</th><td><input type="password" name="pwd" /></td></tr>
                 <tr><th>验证码：</th><td><input type="text" name="captcha" /></td></tr>
                 <tr><td>&nbsp;</td><td><img src="__CONTROLLER__/captcha" onclick="this.src='__CONTROLLER__/captcha/'
                                 +Math.random()" /></td></tr>
@@ -24,8 +23,6 @@
                     <a href="__APP__/">返回首页</a> </td></tr>
             </table>
         </form>
-        <div class="clear"></dic>
-        </div>
     </div>
 </div>
 </body>

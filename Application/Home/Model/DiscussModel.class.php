@@ -14,6 +14,7 @@ class DiscussModel extends Model{
 		$data['mail'] = $_POST['mail'];
 		$data['comment'] = $_POST['comment'];
 		//为其他字段赋值
+		$data['reply'] = '';
 		$data['date'] = date('Y-m-d H:i:s');
 		$data['ip'] = $_SERVER["REMOTE_ADDR"];
 		//拼接sql语句
@@ -37,7 +38,7 @@ class DiscussModel extends Model{
 			$order = 'order by id desc';
 		}
 		//拼接SQL
-		$sql = "select `poster`,`comment`,`date` from `comment` $order limit $limit";
+		$sql = "select `poster`,`comment`,`date`,`reply` from `comment` $order limit $limit";
 		//查询结果
 		$data = $this->db->fetchAll($sql);
 		return $data;

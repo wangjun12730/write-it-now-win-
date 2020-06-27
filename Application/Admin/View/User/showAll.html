@@ -1,76 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Simpla Admin </title>
+    <!--                       CSS                       -->
+    <!-- Reset Stylesheet -->
+    <link rel="stylesheet" href="__PUBLIC__/css/reset.css" type="text/css" media="screen" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" media="screen" />
+    <!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+    <link rel="stylesheet" href="__PUBLIC__/css/invalid.css" type="text/css" media="screen" />
+    <!--                       Javascripts                       -->
+    <!-- jQuery -->
+    <script type="text/javascript" src="__PUBLIC__/scripts/jquery-1.3.2.min.js"></script>
+    <!-- jQuery Configuration -->
+    <script type="text/javascript" src="__PUBLIC__/scripts/simpla.jquery.configuration.js"></script>
+    <!-- Facebox jQuery Plugin -->
+    <script type="text/javascript" src="__PUBLIC__/scripts/facebox.js"></script>
+    <!-- jQuery WYSIWYG Plugin -->
+    <script type="text/javascript" src="__PUBLIC__/scripts/jquery.wysiwyg.js"></script>
+    <!-- jQuery Datepicker Plugin -->
+    <script type="text/javascript" src="__PUBLIC__/scripts/jquery.datePicker.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/scripts/jquery.date.js"></script>
+</head>
+<body>
+<div id="body-wrapper">
+    <!-- Wrapper for the radial gradient background -->
+    <div id="sidebar">
+        <div id="sidebar-wrapper">
+            <!-- Sidebar with logo and menu -->
+            <h1 id="sidebar-title"><a href="#">Simpla Admin</a></h1>
+            <!-- Logo (221px wide) -->
+            <a href="http://www.865171.cn"><img id="logo" src="__PUBLIC__/images/logo.png" alt="Simpla Admin logo" /></a>
+            <!-- Sidebar Profile links -->
+            <div id="profile-links"> Hello, 管理员 <br />
+                <br />
+                <a href="{:U('Admin/Admin/logout')}" title="退出">退出</a> </div>
+            <ul id="main-nav">
+                <!-- Accordion Menu -->
 
+                <li> <a href="#" class="nav-top-item ">
+                    <!-- Add the class "current" to current menu item -->
+                    用户管理 </a>
+                    <ul>
+                        <li><a href="{:U('Admin/user/showAll')}">用户列表</a></li>
 
-<div class="title1" style="color:#09C;font-weight:bold;">用户管理</div>
-<div class="showAllUser">
-    <div  style="margin-bottom: 30px;margin-top: 20px" >
-        <a class="btn btn-warning">用户列表</a>
-        <a class="btn btn-primary" href="__CONTROLLER__/searchUser">搜索用户</a>
-        <a class="btn btn-primary" href="__CONTROLLER__/showBanUser">被封禁用户</a>
-    </div>
-
-    <if condition="$empty==1">
-        <h3>现在还没有用户注测</h3>
-    <else />
-        <table class="table table-striped table-hover table-condensed">
-            <tr>
-                <th>id</th>
-                <th>头像</th>
-                <th>姓名</th>
-                <th>电话</th>
-                <th>电子邮件</th>
-                <th>个性签名</th>
-                <th>是否被封禁</th>
-                <th>封禁</th>
-            </tr>
-            <foreach name="result" item="v">
-                <tr>
-                    <td class="u_id" style="padding-top: 20px ">{$v.id}</td>
-                    <td><img src="__PUBLIC__/{$v.picture}" style="width: 50px;height: 50px"></td>
-                    <td style="padding-top: 20px ">{$v.name}</td>
-                    <td style="padding-top: 20px ">{$v.tel}</td>
-                    <td style="padding-top: 20px ">{$v.email}</td>
-                    <td style="padding-top: 20px "><div   data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$v.per_signature}" title="个性签名" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;width:145px;">
-                        {$v.per_signature}
-                    </div></td>
-                    <td style="padding-top: 20px ">{$v.is_ban}</td>
-                    <td style="padding-top: 15px "><a  class="btn btn-primary ban"  data-toggle="modal" data-target="#myModal">封禁</a></td>
-                </tr>
-            </foreach>
-        </table>
-
-
-    </if>
-<!-- 封禁时间模态框 -->
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">请选择封禁时间</h4>
-                </div>
-                <form action="__CONTROLLER__/banUser" method="post">
-                    <div class="modal-body">
-                        <input type="datetime-local" name="ban_time" />
-                    </div>
-                    <div class="modal-footer">
-                        <input type="hidden" id="id" name="id" />
-                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                        <button type="submit" class="btn btn-primary ">保存</button>
-                    </div>
-                </form>
-            </div>
+                    </ul>
+                </li>
+                <li> <a href="#" class="nav-top-item"> 讨论管理 </a>
+                    <ul>
+                        <li><a href="{:U('Admin/User/showAll')}">讨论列表</a></li>
+                    </ul>
+                </li>
+                <!-- End #main-nav -->
+                <!-- End #messages -->
+            </ul>
         </div>
     </div>
-</div>
+    <!-- End #sidebar -->
+    <div id="main-content">
 
-<script>
-    $(function () {
-        $('[data-toggle="popover"]').popover()
-    });
-    $(document).ready(function () {
-        $(".ban").click(function () {
-            $("#id").val($(this).parent().parent().find("td").eq(0).text());
-        });
-    })
-</script>
+        <!-- Page Head -->
+        <h2>Welcome 来到首页</h2>
+
+        <!-- End .shortcut-buttons-set -->
+        <div class="clear"></div>
+        <!-- End .clear -->
+        <div class="content-box">
+            <!-- Start Content Box -->
+            <div class="content-box-header">
+                <h3>Content box</h3>
+                <ul class="content-box-tabs">
+                    <li><a href="#tab1" class="default-tab">Table</a></li>
+                    <!-- href must be unique and match the id of target div -->
+
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!-- End .content-box-header -->
+            <div class="content-box-content">
+                <div class="tab-content default-tab" id="tab1">
+
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                <input class="check-all" type="checkbox" />
+                            </th>
+
+                            <th>姓名</th>
+                            <th>电话</th>
+                            <th>密码</th>
+                            <th>邮箱</th>
+                            <th>个性签名</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <td colspan="6">
+                              <div class="pagination">{$pageControl}</div>
+                                <!--<div class="pagination"> <a href="#" title="First Page">&laquo; First</a><a href="#" title="Previous Page">&laquo; Previous</a> <a href="#" class="number" title="1">1</a> <a href="#" class="number" title="2">2</a> <a href="#" class="number current" title="3">3</a> <a href="#" class="number" title="4">4</a> <a href="#" title="Next Page">Next &raquo;</a><a href="#" title="Last Page">Last &raquo;</a> </div>-->
+                                <!--&lt;!&ndash; End .pagination &ndash;&gt;-->
+                                <div class="clear"></div>
+                            </td>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        <volist name="users" id="user">
+                            <tr>
+
+                                <td>
+                                    <input type="checkbox" />
+                                </td>
+                                <td>{$user['name']}</td>
+                                <td><a href="#" title="title">{$user['tel']}</a></td>
+                                <td>{$user['pwd']}</td>
+                                <td>{$user['email']}</td>
+                                <td>{$user['per_signature']}</td>
+                                <td>
+                                    <!-- Icons -->
+                                    <a  href="{:U('Admin/user/showUpdate',array('id'=>$user['id']))}" title="Edit">
+                                        <img src="__PUBLIC__/images/icons/pencil.png" alt="Edit" /></a>
+                                    <a href="{:U('Admin/user/del',array('id'=>$user['id']))}" title="Delete"><img src="__PUBLIC__/images/icons/cross.png" alt="Delete" /></a>
+             </td>
+
+                            </tr>
+                        </volist>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- End #tab1 -->
+
+            </div>
+            <!-- End .content-box-content -->
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="footer"> <small>
+            <!-- Remove this notice or replace it with whatever you want -->
+            &#169; Simpla Admin </small> </div>
+        <!-- End #footer -->
+    </div>
+    <!-- End #main-content -->
+</div>
+</body>
+<!-- Download From www.exet.tk-->
+</html>

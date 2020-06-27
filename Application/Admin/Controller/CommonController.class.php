@@ -1,18 +1,32 @@
 <?php
-namespace Admin\Controller;
+namespace Admin\Controller; //²»Í¬Æ½Ì¨¿ØÖÆÆ÷ÃüÃû¿Õ¼ä²»Í¬
 use Think\Controller;
 class CommonController extends Controller{
-    //æž„é€ å‡½æ•°ï¼ŒåŒæ—¶æ£€æŸ¥ç®¡ç†å‘˜æ˜¯å¦ç™»å½•
+    //¹¹Ôì·½·¨
     public function __construct(){
         parent::__construct();
-        //æ£€æŸ¥ç®¡ç†å‘˜æ˜¯å¦ç™»å½•
+        //µÇÂ¼¼ì²é
         $this->checkUser();
     }
-    //æ£€æŸ¥ç®¡ç†å‘˜æ˜¯å¦ç™»å½•
+    //¼ì²éµÇÂ¼
     private function checkUser(){
         if(!session('?admin_name')){
-            $this->error('è¯·ç™»å½•',U('Login/index'));
+            $this->error('ÇëµÇÂ¼',U('Login/index'));
         }
     }
-
+    /**
+     * ¹«¹²Êý¾Ý´´½¨·½·¨
+     * @param string $tablename ±íÃû
+     * @param string $func ²Ù×÷·½·¨
+     * @param int $type ÑéÖ¤Ê±»ú
+     * @param string/array $where ²éÑ¯Ìõ¼þ
+     * @return mixed ²Ù×÷½á¹û
+     */
+    protected function create($tablename,$func,$type=1,$where=array()){
+        $Model = D($tablename);
+        if(!$Model->create(I('post.'),$type)){
+            $this->error($Model->getError());
+        }
+        return $Model->where($where)->$func();
+    }
 }

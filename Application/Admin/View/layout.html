@@ -5,9 +5,6 @@
     <title>WIN后台</title>
     <link href="__PUBLIC__/css/admin.css" rel="stylesheet" />
     <script src="__PUBLIC__/js/jquery.min.js"></script>
-    <link href="__PUBLIC__/css/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="__PUBLIC__/js/jquery-3.4.1.min.js"></script>
-    <script src="__PUBLIC__/css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div id="top">
@@ -21,10 +18,8 @@
 <div id="main">
     <div id="menu" class="left">
         <ul><li><a href="__MODULE__/Index/index" id="Index_index">后台首页</a></li>
-            <li><a href="__MODULE__/Check/checkList" id="Check_index">审核 &nbsp;<span style="color: #2aabd2">{$Think.session.checking}</span></a> </li>
-            <li><a href="__MODULE__/User/showAll" id="Member_index">用户管理</a></li>
-            <li><a href="__MODULE__/Story/storyList" id="Story_index">栏目管理</a></li>
-            <li><a href="__MODULE__/Index/alterpwd" id="alter_pwd">修改密码</a></li>
+            <li><a href="__MODULE__/Check/index" id="Check_index">审核</a> </li>
+            <li><a href="__MODULE__/Member/index" id="Member_index">用户管理</a></li>
         </ul>
     </div>
     <div id="content">
@@ -34,7 +29,5 @@
 <script>
     $("#{$Think.CONTROLLER_NAME}_{$Think.ACTION_NAME}").addClass("curr");
 </script>
-
-
 </body>
 </html>

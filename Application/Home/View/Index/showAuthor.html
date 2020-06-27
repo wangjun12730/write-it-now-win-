@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作者中心界面</title>
+</head>
+<body>
+<style>
+    .showAuthor{
+        min-width: 1200px;
+    }
+    .user-msg{
+        background: url("__PUBLIC__/image/background/1.jpg") no-repeat;
+        background-size: 100% 100%;
+        height: 300px;
+        color: #fff;
+    }
+    .user-msg img{
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+    .user-info{
+        margin-left: -20px;
+        margin-top: 50px;
+    }
+    .user-info .name{
+        line-height: 40px;
+        font-size: 24px;
+    }
+    .intro{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .count{
+        font-size: 20px;
+    }
+    .count span{
+        margin-right: 30px;
+    }
+    .count span i{
+        font-size: 12px;
+    }
+    .count span a{
+        color: #fff;
+    }
+    .rights{
+        padding-top: 116px;
+    }
+    .rights button{
+        width: 126px;
+        height: 40px;
+        padding-top: 3px;
+    }
+    .rights button i{
+        font-size: 24px;
+    }
+    .book-count{
+        margin-top: 50px;
+    }
+    .book-count i{
+        color: #2b669a;
+    }
+    .author-books{
+        margin-top: 30px;
+    }
+    .author-books .title{
+        font-size: 20px;
+        color: #333;
+        letter-spacing: 1px;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+    .book-list{
+        background: #f7f7f7;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+    }
+    .book-list img{
+        width: 112px;
+        height: 146px;
+    }
+    .book-list .book-name{
+        font-size: 20px;
+        letter-spacing: 1.2px;
+    }
+    .book-list .book-name a{
+        color: #333;
+    }
+    .book-list .book-name a:hover{
+
+    }
+</style>
+<div class="showAuthor container">
+    <div class="user-msg row user-head">
+        <div class="col-sm-2">
+            <img src="__PUBLIC__/image/1.jpg" class="img-circle">
+        </div>
+        <div class="col-sm-8 user-info">
+            <p class="name">
+                王俊
+            </p>
+            <p class="intro">
+                <i> 个性签名 &nbsp;<em>| </em></i> &nbsp;<span>俏也不争春，只把春来报，待到山花烂漫时，她在丛中笑。</span>
+            </p>
+            <p class="count">
+                <span><i>关注&nbsp;&nbsp;<em> | </em>&nbsp;</i> <a>26</a></span>
+                <span><i>收藏&nbsp;&nbsp;<em> | </em>&nbsp;</i> <a>27</a></span>
+                <span><i>粉丝&nbsp;&nbsp;<em> | </em>&nbsp;</i> <a>27</a></span>
+            </p>
+            <p class="book-count">
+                <span><i>本站作品数 </i> &nbsp;&nbsp;5</span>
+                &nbsp;&nbsp;&nbsp;<em> | </em>&nbsp;&nbsp;&nbsp;
+                <span><i>累计字数</i>&nbsp;&nbsp;382545 </span>
+            </p>
+        </div>
+        <div class="col-sm-2 rights">
+            <button class="btn btn-danger btn-lg"><i>+</i> &nbsp;&nbsp;关注</button>
+        </div>
+    </div>
+    <div class="row author-books">
+        <div class="title">
+            Ta的作品
+        </div>
+        <div class="book-list">
+            <ul>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <a><img src="__PUBLIC__/image/180.jpg"></a>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="list-msg">
+                                <p class="book-name">
+                                    <a>剑统</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

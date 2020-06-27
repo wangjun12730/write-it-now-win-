@@ -3,75 +3,50 @@ namespace Admin\Controller;
 use Think\Controller;
 use Think\Page;
 class UserController extends Controller {
-    //展示所有用户
+
     public function showAll(){
-        $model = M('members');
-        $res = $model->order('id')->select();
-        if($res){
-            $this->assign('result',$res);
-        }else{
-            $this->assign('empty',1);
-        }
-        $this->display();
+        $user_model=M('user');
+        //导入分页助手类
+        import('Org.Util.Page');
+        $total= $user_model->count();
+        $page=new Page($total,8);
+        $page->setConfig("header",'个用户');
+        $pageControl=$page->show();
+        $users=$user_model->limit("$page->firstRow,$page->listRows")->order("id desc")->select();
+        $this-> assign('users',$users);
+        $this-> assign('pageControl', $pageControl);
+        $this-> display();
+
+    }
+    //实现用户修改功能
+    public function update()
+    {
+        header("Content-Type:text/html;charset=utf-8");
+        $user=M('user');
+        $id=$_GET['id'];
+        $user_list=$user->where("id=$id")->save($_POST);
+        $this->redirect('showAll');//重定向到控制器的方法  display是本控制的方法
+
     }
 
-    //搜索用户
-    public function searchUser(){
-        $this->assign('search',0); //当没有点击搜索时，分配变量$search,值为0
-        if(IS_POST){
-            $content = $_POST['content']; //获取搜索内容
-            $model = M('members'); //实例化模型对象
-            $res1 = $model->where('id='.$content)->find(); //搜索id
-            $res2 = $model->where("name='".$content."'")->select(); //搜索名字
-            if($res1){
-                $this->assign('res1',$res1);
+    public function showUpdate()
+    {
 
-            }
-            if($res2){
-                $this->assign('res2',$res2);
-            }
-            if(!$res1 and !$res2){
-                $this->assign('empty',1); //如果没有查到值，则分配empty
-            }
-            $this->assign('search',1);
-        }
-        $this->display();
+        $user=M('user');
+        $id=$_GET['id'];
+        $user_list=$user->where("id=$id")->find();
+        $this->assign('user_list',$user_list);
+        $this->display('update');
     }
 
-    //查看被封禁用户
-    public function showBanUser(){
-        $model = M('members');
-        $res = $model->where('is_ban is not null')->order('id')->select();
-        if($res){
-            $this->assign('result',$res);
-        }else{
-            $this->assign('empty',1);
-        }
-        $this->display();
+    //实现用户删除功能
+    public function del()
+    {
+        $user=M('user');
+        $id=$_GET['id'];
+        $user->where("id=$id")->delete();
+        $this->redirect('showAll');//重定向到控制器的方法  display是本控制的方法
     }
 
-    //封禁用户
-    public function banUser(){
-        if(IS_POST){
-            $id = $_POST['id']; //获取用户id
-            $ban_time = $_POST['ban_time'];
-            $res = M('members')->where('id='.$id)->setField("is_ban",$ban_time);
-            if($res){
-                $this->success('设置成功!',U('Admin/user/showAll'),1);
-            }else{
-                $this->error('设置失败','',1);
-            }
-        }
-    }
-    //解封用户
-    public function deblocking(){
-        $id = $_GET['user_id']; //获取用户id
-        $res = M('members')->where('id='.$id)->setField('is_ban',null); //设置is_ban字段为0
-        if($res){
-            $this->success('解封成功!',U('Admin/user/showBanUser'),1);
-        }else{
-            $this->error('解封失败!','',1);
-        }
-    }
 
 }
