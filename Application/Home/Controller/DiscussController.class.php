@@ -29,7 +29,7 @@ class DiscussController extends Controller {
 		//取得所有留言数据
 		$data = $commentModel->getAll($page->getLimit());
 		//载入视图文件
-		require './Application/Home/View/disscuss_list.html';
+		require './Application/Home/View/discuss_list.html';
 	}
 	
 		/**
