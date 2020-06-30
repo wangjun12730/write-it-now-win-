@@ -1,0 +1,24 @@
+[ 2020-06-21T14:55:22+08:00 ] ::1 /win/write-it-now-win-/Home/Iframe/discuss_list
+ERR: 无法加载控制器:Iframe
+
+[ 2020-06-21T15:07:04+08:00 ] ::1 /win/write-it-now-win-/Home/Index/discuss_list
+ERR: 模板不存在:./Application/Home/View/Index/discuss_list.html
+
+[ 2020-06-21T15:07:30+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/Public/css/home.css
+ERR: 无法加载控制器:Application
+
+[ 2020-06-21T15:07:47+08:00 ] ::1 /win/write-it-now-win-/Application/Home/View/index.php?p=home&c=comment&a=add
+ERR: 无法加载控制器:Application
+
+[ 2020-06-21T15:08:45+08:00 ] ::1 /win/write-it-now-win-/Home/Index/Public/css/home.css
+ERR: 非法操作:Public
+
+[ 2020-06-21T15:08:47+08:00 ] ::1 /win/write-it-now-win-/Home/Index/Public/css/home.css
+ERR: 非法操作:Public
+
+[ 2020-06-21T15:08:49+08:00 ] ::1 /win/write-it-now-win-/Home/Index/Public/css/home.css
+ERR: 非法操作:Public
+
+[ 2020-06-21T15:14:33+08:00 ] ::1 /win/write-it-now-win-/Home/discuss_list
+ERR: 无法加载控制器:Discuss_list
+
