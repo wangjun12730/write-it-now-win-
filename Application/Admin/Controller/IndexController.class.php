@@ -29,4 +29,5 @@ class IndexController extends CommonController{
             }
         }
     }
+
 }

@@ -1,49 +1,68 @@
-{__NOLAYOUT__}
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>write it now!</title>
     <link href="__PUBLIC__/css/layout.css" rel="stylesheet" />
     <link rel="stylesheet" href="__PUBLIC__/css/font-awesome.min.css">
+    <link href="__PUBLIC__/css/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="__PUBLIC__/js/jquery-3.4.1.min.js"></script>
+    <script src="__PUBLIC__/css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
 </head>
-<body>
-<!--顶部-->
-<div id="top">
-    <div class="top_nav">
-        <ul class="left">
-            <present name="mid">
-                <li><a href="__MODULE__/User/index"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Hello，{$mname}！[<a href="__MODULE__/User/logout">退出</a>]<li>
-                <else/>
-                <li>Hello！[<a href="__MODULE__/User/login">登录</a>][<a href="__MODULE__/User/register">免费注册</a>]</li>
-            </present>
-        </ul>
-        <ul class="right">
-            <li><a href="#"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></li>
-        </ul>
-    </div>
-</div>
+<body style="padding-top: 70px">
+<nav class="navbar navbar-default navbar-fixed-top" style="min-width: 1200px;font-size: 16px">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="display: inline-block;margin-top: -15px"><img src="__PUBLIC__/image/background/logo1.png" style="height: 50px;width: 100px"></a>
+        </div>
 
-<!--选项-->
-<div id="option">
-    <section class="center">
-        <ul class="link">
-            <li class="z"><a href="__MODULE__/Index/shouye" target="myiframe">首页</a></li>
-            <li class="line">|</li>
-            <li class="z"><a href="__MODULE__/Iframe/discuss_list" target="myiframe">讨论</a></li>
-        </ul>
-    </section>
-</div>
-<!--内嵌框架-->
-<section>
-    <iframe src="__MODULE__/Index/shouye" name="myiframe" scrolling="yes"> </iframe>
-</section>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="__MODULE__/Index/index">首页</a></li>
+                <li><a href="#">讨论区</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <if condition="$Think.session.user_name eq null">
+                    <li><a href="__MODULE__/User/login" target="_blank">登录</a></li>
+                    <li><a href="__MODULE__/User/register" style="margin-right: 50px">注册</a></li>
+                 <else />
+                    <li><button type="button" class="btn btn-default navbar-btn" onclick="window.open('__MODULE__/User/Index');"><span class="glyphicon glyphicon-edit" style="color: #ebccd1;"></span>&nbsp;&nbsp;创作中心</button></li>
+                    <li><a href="__MODULE__/User/collection" target="_blank"><span title="收藏" class="glyphicon glyphicon-star" style="color: #ebccd1;font-size: 18px;margin-right: -10px"></span></a></li>
+                    <li><a href="__MODULE__/Message/messageList" target="_blank"><span title="消息 {$Think.session.messages}" class="glyphicon glyphicon-bell" style="color: #ebccd1;font-size: 18px;margin-right: 10px"></span></a></li>
+                    <li class="dropdown" style="margin-right: 50px">
+                        <a href="#" class="dropdown-toggle" target="_blank" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: inline-block;padding: 0;margin-top: 5px"><img src="__PUBLIC__/{$Think.session.user_picture}" class="img-circle" style="height: 40px;width: 40px" /></a>
+                        <ul class="dropdown-menu" style="color: #333">
+                            <li><a href="__MODULE__/User/follow"><span class="glyphicon glyphicon-heart" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的关注</a></li>
+                            <li><a href="__MODULE__/User/collection"><span class="glyphicon glyphicon-star" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的收藏</a></li>
+                            <li><a href="__MODULE__/User/index"><span class="glyphicon glyphicon-user" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 个人中心</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="__MODULE__/User/index"><span class="glyphicon glyphicon-book" style="color: #ebccd1"></span>&nbsp; &nbsp;&nbsp;我的小说</a></li>
+                            <li><a href="__MODULE__/User/moment"><span class="glyphicon glyphicon-pencil" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的说说</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-question-sign" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 帮助</a></li>
+                            <li><a href="__MODULE__/User/logout"><span class="glyphicon glyphicon-log-out" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 退出</a></li>
+                        </ul>
+                    </li>
+                </if>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
-
-<!--footer-->
+<div class="layout-content" style="min-height: 500px">
 {__CONTENT__}
-
-<footer><p>write it now!</p>
-    <p>win</p></footer>
+</div>
+<!--footer-->
+<footer style="min-width:1200px;height: 200px;padding-top: 50px;background-color: #f8f8f8;"><h3>write it now!</h3>
+    <h3>win</h3></footer>
 </body>
 </html>

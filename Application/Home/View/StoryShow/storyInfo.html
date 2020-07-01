@@ -1,0 +1,244 @@
+<style>
+    .box-info{
+        margin-top: -20px;
+        width: 100%;
+        height: 100%;
+        min-width: 1200px;
+        background-color: #FDE6E0;
+    }
+    .story-info-show{
+        min-width: 1200px;
+    }
+    .reader_crumb{
+        margin-top: 30px;
+        color: #666;
+    }
+    .reader_crumb a{
+        color: #666;
+    }
+    .reader_crumb a:hover{
+        color: #2aabd2;
+    }
+    .book-index{
+        margin-top: 10px;
+        margin-right: -30px;
+        margin-left: 31px;
+        top: 70px;
+        left: 40px;
+        right: -30px;
+        position: sticky;
+    }
+    .book-index a{
+        text-align: center;
+        background-color: #ebccd1;
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin-bottom: 2px;
+        padding-top: 12px;
+    }
+    .book-index a:hover{
+        text-decoration: none;
+    }
+
+    .book-index a span{
+        display: block;
+    }
+    .book-index-name{
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    .marker span{
+        font-size: 25px;
+        margin-right: 20px;
+        display: inline-block;
+        float: right;
+        color: #8c8c8c;
+    }
+    .read_box{
+        margin-top: 10px;
+        width: 100%;
+        background-color: #FFF2E2;
+        margin-bottom: 50px;
+    }
+    .title{
+        margin-top: 50px;
+        width: 100%;
+        line-height: 40px;
+        font-size: 28px;
+        color: #333;
+        letter-spacing: 1.08px;
+        display: inline-block;
+        font-weight: 700;
+        text-align: center;
+    }
+    .book-info{
+
+        color: #999;
+    }
+    .book-info p{
+        margin-top: 20px;
+        font-size: 12px;
+        text-align: center;
+        width: 100%;
+    }
+    .book-info p a{
+        color: #2a2a2a;
+    }
+    .book-info p a:hover{
+        text-decoration: none;
+        color: red;
+    }
+    .reader_line{
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+    .content{
+        font-family: 宋体;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -o-user-select:none;
+        user-select:none;
+    }
+    .content p{
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 2em;
+        text-indent: 2em;
+    }
+    .section-buttons{
+        margin-top: 50px;
+        display: table;
+        height: 50px;
+
+    }
+    .section-buttons a{
+        background-color: rgba(0,0,0,.03);
+        border-radius: 2px;
+        height: 50px;
+        display: table-cell;
+        border-collapse: separate;
+        line-height: 50px;
+        font-size: 14px;
+        color: #333;
+        letter-spacing: 1px;
+        width: 260px;
+        text-align: center;
+    }
+    .section-buttons a:hover{
+        text-decoration: none;
+        color: red;
+        background-color: #c8e5bc;
+    }
+    .comments{
+        margin-top: 70px;
+        padding-bottom: 30px;
+    }
+    .comments h4{
+        display: inline-block;
+    }
+    .comments ul{
+        list-style: none;
+    }
+    .comments ul li{
+        margin-top: 10px;
+    }
+    .comments img{
+        width: 50px;
+        height: 41.2px;
+    }
+    .reader-name{
+        color: #999;
+    }
+    .reader-comment{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .origin{
+        background-color: #f7f8fa;
+        color: #999;
+        height: 50px;
+        padding-top: 15px;
+    }
+    .other{
+        color: #999;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+    .time{
+        float: left;
+    }
+    .fr{
+        float: right;
+    }
+    .fr .zan{
+        margin-right: 15px;
+    }
+
+</style>
+<div class="box-info">
+    <div class="story-info-show container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="reader_crumb">
+            <a href="__MODULE__/Index/index">首页</a>
+             &nbsp;>&nbsp;
+            <a>{$story.tag}频道</a>
+            &nbsp;>&nbsp;
+            <a href="__CONTROLLER__/readerStoryShow/s_id/{$story.id}">{$story.name}</a>
+            <span> &nbsp;>&nbsp; {$res.section}&nbsp; {$res.title}</span>
+        </div>
+            </div>
+        </div>
+        <div class="read_content">
+            <div class="row">
+                <div class="col-sm-1 book-index">
+                    <a href="__CONTROLLER__/sectionList/s_id/{$story.id}"><span class="glyphicon glyphicon-list" ></span><span class="book-index-name">目录</span></a>
+                    <a href="__MODULE__/User/collection" target="_blank"><span class="glyphicon glyphicon-book"></span><sapn class="book-index-name">书架</sapn></a>
+                    <a href="__CONTROLLER__/readerStoryShow/s_id/{$story.id}"><span class="glyphicon glyphicon-tags"></span><span class="book-index-name">书页</span></a>
+                    <a><span class="glyphicon glyphicon-cog"></span><sapn class="book-index-name">设置</sapn></a>
+                </div>
+                <div class="col-sm-10">
+                    <div class="read_box">
+                        <div class="marker">
+                            <span class="glyphicon glyphicon-bookmark"></span>
+                        </div>
+                        <div class="title">
+                            {$res.section} &nbsp;{$res.title}
+                        </div>
+                        <div class="book-info">
+                            <p>作者：<a>{$res.user_name}</a> &nbsp;|&nbsp; 字数：{$res.font_count} &nbsp;|&nbsp; 更新时间：{$res.update_time}</p>
+                        </div>
+                        <div class="content-info">
+                            <div class="row">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <div class="reader_line">
+                                    </div>
+                                    <div class="content">
+                                        {$res.content}
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <div class="section-buttons">
+                                <a href="__ACTION__/s_id/{$story.id}/section/{$pre}">{$pre_section}</a>&nbsp;&nbsp;
+                                <a href="__CONTROLLER__/sectionList/s_id/{$story.id}">目录</a>&nbsp;&nbsp;
+                                <a href="__ACTION__/s_id/{$story.id}/section/{$next}">{$next_section}</a>&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                      <br />
+                        <br />
+                        <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

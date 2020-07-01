@@ -1,0 +1,247 @@
+<style>
+    .showAuthor{
+        min-width: 1200px;
+        margin-bottom: 50px;
+        margin-top: -20px;
+        background: url("__PUBLIC__/image/background/1.jpg") no-repeat;
+        background-size: 100% 100%;
+    }
+    .user-msg{
+        height: 300px;
+        color: #fff;
+    }
+    .user-msg img{
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+    .user-info{
+        margin-left: -20px;
+        margin-top: 50px;
+    }
+    .user-info .name{
+        line-height: 40px;
+        font-size: 24px;
+    }
+    .intro{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .count{
+        font-size: 20px;
+    }
+    .count span{
+        margin-right: 30px;
+    }
+    .count span i{
+        font-size: 12px;
+    }
+    .count span a{
+        color: #fff;
+    }
+    .rights{
+        padding-top: 116px;
+    }
+    .rights button{
+        width: 126px;
+        height: 40px;
+        padding-top: 3px;
+    }
+    .rights button i{
+        font-size: 24px;
+    }
+    .book-count{
+        margin-top: 50px;
+    }
+    .book-count i{
+        color: #2b669a;
+    }
+    .author-books{
+        margin-top: 30px;
+    }
+    .author-books .title{
+        font-size: 20px;
+        color: #333;
+        letter-spacing: 1px;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+    .book-list{
+        background: #f7f7f7;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+    }
+    .book-list img{
+        width: 112px;
+        height: 146px;
+    }
+    .book-list .book-name{
+        font-size: 20px;
+        letter-spacing: 1.2px;
+    }
+    .book-list .book-name a{
+        color: #333;
+    }
+    .book-list .book-name a:hover{
+        text-decoration: none;
+        color: #9B410E;
+    }
+    .book-list .list-msg{
+        margin-left: -50px;
+    }
+    .book-list .list-msg .tag{
+        font-size: 12px;
+        color: #999;
+    }
+    .book-list .list-msg .tag a{
+        color: #999;
+    }
+    .book-list .list-msg .tag a:hover{
+        color: #9B410E;
+        text-decoration: none;
+    }
+    .book-sig{
+        margin-top: 20px;
+        height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .new-section{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    .new-section a{
+        color: #999;
+    }
+    .new-section a:hover{
+        color: #9B410E;
+        text-decoration: none;
+    }
+
+    .right-btn{
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    .right-btn a{
+         width: 100px;
+         margin-top: 20px;
+         display: block;
+     }
+    .right-btn button{
+        width: 100px;
+        margin-top: 20px;
+        display: block;
+    }
+    .showAuthor-books{
+        margin-bottom: 30px;
+    }
+</style>
+<div class="showAuthor container-fluid">
+    <div class="container">
+        <div class="user-msg row user-head">
+            <div class="col-sm-2">
+                <img src="__PUBLIC__/{$author_info.picture}" class="img-circle">
+            </div>
+            <div class="col-sm-8 user-info">
+                <p class="name">
+                    {$author_info.name}
+                </p>
+                <p class="intro">
+                    <i> 个性签名 &nbsp;<em>| </em></i> &nbsp;<span>{$author_info.per_signature}</span>
+                </p>
+                <p class="count">
+                    <span><i>关注&nbsp;&nbsp;<em> | </em>&nbsp;</i> <a href="__CONTROLLER__/follow/author/{$author_info.id}">{$followcount}</a></span>
+                    <span><i>收藏&nbsp;&nbsp;<em> | </em>&nbsp;</i> <a href="__CONTROLLER__/followStory/author/{$author_info.id}">{$collcount}</a></span>
+                    <span><i>粉丝&nbsp;&nbsp;<em> | </em>&nbsp;</i> <a href="__CONTROLLER__/fans/author/{$author_info.id}">{$fancount}</a></span>
+                </p>
+                <p class="book-count">
+                    <span><i>本站作品数 </i> &nbsp;&nbsp;{$story_count}</span>
+                    &nbsp;&nbsp;&nbsp;<em> | </em>&nbsp;&nbsp;&nbsp;
+                    <span><i>累计字数</i>&nbsp;&nbsp;{$font_count} </span>
+                </p>
+            </div>
+            <div class="col-sm-2 rights">
+                <if condition="$is_follow eq 0">
+                    <button class="btn btn-danger btn-lg" form="follow"><i>+</i> &nbsp;&nbsp;关注</button>
+                    <form action="__MODULE__/Follow/follow" method="post" id="follow">
+                        <input type="hidden" name="author_id" value="{$author_info.id}"/>
+                        <input type="hidden" name="author_name" value="{$author_info.name}"/>
+                        <input type="hidden" name="fan_id" value="{$Think.session.user_id}"/>
+                        <input type="hidden" name="fan_name" value="{$Think.session.user_name}"/>
+                    </form>
+                 <else />
+                    <button class="btn btn-danger btn-lg" form="unfollow" style="padding-top: 9px">取消关注</button>
+                    <form action="__MODULE__/Follow/unfollow" method="post" id="unfollow">
+                        <input type="hidden" name="author_id" value="{$author_info.id}"/>
+                        <input type="hidden" name="fan_id" value="{$Think.session.user_id}"/>
+                    </form>
+                </if>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container showAuthor-books">
+    <div class="row author-books">
+        <div class="title">
+            Ta的作品
+        </div>
+        <div class="book-list">
+            <ul>
+                <foreach name="story_info" item="v">
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <a><img src="__PUBLIC__/{$v.picture}"></a>
+                            </div>
+                            <div class="col-sm-8 list-msg">
+                                <p class="book-name">
+                                    <a>{$v.name}</a>
+                                </p>
+                                <p class="tag">
+                                    <a>{$v.tag}</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                                    <if condition="$v.is_doing eq 0">
+                                        <span>连载中</span>
+                                    <else />
+                                        <span>完结</span>
+                                    </if>
+                                    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span>{$v.font_count}</span>
+                                </p>
+                                <p class="book-sig">
+                                    {$v.info}
+                                </p>
+                                <p class="new-section">
+                                    <a href="__MODULE__/StoryShow/storyInfo/s_id/{$v.id}/section/{$v.newsection.id}">最新章节： {$v.newsection.section} &nbsp;{$v.newsection.title}</a>
+                                </p>
+                            </div>
+                            <div class="col-sm-2 right-btn">
+                                <a href="__MODULE__/StoryShow/readerStoryShow/s_id/{$v.id}" class="btn btn-danger">立即阅读</a>
+                                <if condition="$v.is_collection eq 0">
+                                    <form action="__MODULE__/Collection/collection" method="post" target="_blank">
+                                        <input type="hidden" value="{$v.user_id}" name="author_id"/>
+                                        <input type="hidden" value="{$v.user_name}" name="author_name"/>
+                                        <input type="hidden" value="{$v.id}" name="story_id"/>
+                                        <input type="hidden" value="{$v.name}" name="story_name"/>
+                                        <input type="hidden" value="{$Think.session.user_id}" name="follower_id"/>
+                                        <input type="hidden" value="{$Think.session.user_name}" name="follower_name"/>
+                                        <button type="submit" class="btn btn-default">放入书架</button>
+                                    </form>
+                                <else />
+                                    <form action="__MODULE__/Collection/uncollection" method="post" >
+                                        <input type="hidden" value="{$v.user_id}" name="author_id"/>
+                                        <input type="hidden" value="{$v.id}" name="story_id"/>
+                                        <input type="hidden" value="{$Think.session.user_id}" name="follower_id"/>
+                                        <button type="submit" class="btn btn-default">取消收藏</button>
+                                    </form>
+                                </if>
+                            </div>
+                        </div>
+                        <hr />
+                    </li>
+                </foreach>
+            </ul>
+        </div>
+    </div>
+</div>

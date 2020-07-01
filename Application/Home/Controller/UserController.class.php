@@ -21,6 +21,7 @@ class UserController extends Controller
             //将获取的用户信息存入会话
             $_SESSION['user_id'] =$members['id'];
             $_SESSION['user_name'] = $members['name'];
+            $_SESSION['user_picture'] = $members['picture'];
             //获取用户栏目数
             $members1 = M('stories_1000')->where('user_id='.$members['id'])->select();
             if(is_array($members1)){//判断是否获取到栏目
@@ -42,7 +43,31 @@ class UserController extends Controller
             }else{
                 $_SESSION['check'] = "0"; //没有审核，则将审核会话设置为0
             }
-            $this->success('登录成功！',U('User/index'));
+
+            //获取登录用户关注作者数
+            $follow = M('follow')->where('fan_id='.$members['id'])->select();
+            if($follow){
+                $_SESSION['follow'] = count($follow);  //设置会话变量
+            }else{
+                $_SESSION['follow'] = 0;
+            }
+
+            //获取用户粉丝数
+            $fan = M('follow')->where('author_id='.$members['id'])->select();
+            if($fan){
+                $_SESSION['fan'] = count($fan);  //设置会话变量
+            }else{
+                $_SESSION['fan'] = 0;
+            }
+            //获取用户关注文章数
+            $collection = M('collection')->where('follower_id='.$members['id'])->select();
+            if($collection){
+                $_SESSION['collection'] = count($collection);  //设置会话变量
+            }else{
+                $_SESSION['collection'] = 0;
+            }
+
+            $this->success('登录成功！',U('Index/index'));
             return;
         }
         $this->display();
@@ -104,6 +129,14 @@ class UserController extends Controller
         $res = $model->where("user_id=".$_SESSION['user_id'])->select();
         if($res){
             $this->assign('result',$res);
+            //统计作者创作的总字数
+            $font_count = 0;
+            foreach ($res as $v){
+                $font_count += $v['font_count'];
+            }
+            $this->assign('font_count',$font_count);
+        }else{
+            $this->assign('font_count',0);
         }
         $this->display();
     }
@@ -157,7 +190,7 @@ class UserController extends Controller
         //删除栏目所有的章节
         $res2 = M('stories_1000_section_0')->where('story_id='.$story_id)->delete();
 
-        if ($res2===0 and $res1){
+        if ($res2 and $res1){
             $_SESSION['story_count'] -=1;
             echo "<script>alert('删除栏目成功!');location='".U('User/index')."'</script>";
         }else{
@@ -301,5 +334,93 @@ class UserController extends Controller
         }
     }
 
+    //关注
+    public function follow(){
+        //查询用户信息
+        $user = M('members')->where('id='.$_SESSION['user_id'])->find();
+        if($user){
+            $this->assign('user',$user);
+        }
 
+        //获取关注的作者的信息
+        $res = M('follow')->where('fan_id='.$_SESSION['user_id'])->select();
+        if($res){
+            $count = count($res); //统计数目
+            $_SESSION['follow'] = $count;//添加会话变量
+
+            $data = array(); //存被关注者信息
+            for($i=0;$i<$count;$i++){
+                //查询被关注者信息
+                $followed = M('members')->where('id='.$res[$i]['author_id'])->find();
+                $data[$i] = $followed;
+            }
+            $this->assign('count',$count);
+            $this->assign('data',$data);
+        }else{
+            $_SESSION['follow'] = 0;//添加会话变量
+            //没有关注，则设置计数为0
+            $this->assign('count',0);
+        }
+
+        $this->display();
+    }
+
+    //粉丝
+    public function fan(){
+        //查询用户信息
+        $user = M('members')->where('id='.$_SESSION['user_id'])->find();
+        if($user){
+            $this->assign('user',$user);
+        }
+
+        //获取关注的作者的信息
+        $res = M('follow')->where('author_id='.$_SESSION['user_id'])->select();
+        if($res){
+            $count = count($res); //统计数目
+            $_SESSION['fan'] = $count;//添加会话变量
+
+            $data = array(); //存被关注者信息
+            for($i=0;$i<$count;$i++){
+                //查询被关注者信息
+                $fan = M('members')->where('id='.$res[$i]['fan_id'])->find();
+                $data[$i] = $fan;
+            }
+            $this->assign('count',$count);
+            $this->assign('data',$data);
+        }else{
+            $_SESSION['fan'] = 0;//添加会话变量为0
+            //没有关注，则设置计数为0
+            $this->assign('count',0);
+        }
+
+        $this->display();
+        $this->display();
+    }
+
+    //收藏
+    public function collection(){
+        //查询用户信息
+        $user = M('members')->where('id='.$_SESSION['user_id'])->find();
+        if($user){
+            $this->assign('user',$user);
+        }
+        //查询收藏小说
+        $res = M('collection')->where('follower_id='.$_SESSION['user_id'])->select();
+        if($res){
+            $count = count($res); //统计收藏的数目
+            $_SESSION['collection'] = $count;
+
+            //查询每个被收藏小说信息
+            for($i=0;$i<$count;$i++){
+                $collection = M('stories_1000')->where('id='.$res[$i]['story_id'])->find();
+                $res[$i]['collection'] = $collection; //将每个被收藏的小说信息存进结果数组
+            }
+            $this->assign('count',$count);
+            $this->assign('res',$res);
+        }else{
+            $_SESSION['collection'] = 0;
+            $this->assign('count',0);
+        }
+        $this->display();
+    }
 }

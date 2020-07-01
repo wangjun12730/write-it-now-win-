@@ -1,0 +1,120 @@
+<style>
+    .follow{
+        min-width: 1200px;
+        margin-bottom: 30px;
+    }
+    .menu{
+        color: #666;
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+    .menu a{
+        color: #666;
+    }
+    .follow-info{
+        margin-top: 30px;
+    }
+    .menu-tab{
+        border: 1px solid #e0e0e0;
+        height: 40px;
+        line-height: 36px;
+    }
+    .menu-tab a{
+        text-align: center;
+        display: inline-block;
+        height: 100%;
+        width: 150px;
+        color: #666;
+    }
+    .menu-tab .menu-tab-follow{
+        text-align: center;
+        display: inline-block;
+        height: 100%;
+        width: 150px;
+        background: #9B410E;
+        color: #fff;
+    }
+    .menu-tab a:hover{
+        text-decoration: none;
+        color: #9B410E;
+    }
+    .follow-info{
+        border: 1px solid #e0e0e0;
+        padding: 30px 30px;
+        margin-top: 0;
+    }
+    .follow-info p{
+        font-size: 12px;
+        color: #999;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .follow-info img{
+        width: 60px;
+        height: 60px;
+    }
+    .follow-info .name{
+        font-size: 16px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    .follow-info .name a{
+        color: #333;
+
+    }
+    .follow-info .user-info{
+        margin-left: -20px;
+    }
+    .follow-info .user-info .btn1{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    .showmore{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .showmore a{
+        color: #999;
+
+    }
+    .showmore a:hover{
+        text-decoration: none;
+    }
+
+</style>
+
+<div class="follow container">
+    <div class="menu">
+        <span><a href="__CONTROLLER__/showAuthor/author/{$author_id}">Ta的主页</a> > <span>关注</span></span>
+    </div>
+    <div class="menu-tab">
+        <span class="menu-tab-follow"><em><b>关注&nbsp; {$count}</b></em></span>&nbsp;
+        <a href="__CONTROLLER__/fans/author/{$author_id}" class="menu-tab-fan"><em><b>粉丝&nbsp; {$fans_count}</b></em></a>&nbsp;
+        <a href="__CONTROLLER__/followStory/author/{$author_id}" class="menu-tab-follow-story"><em><b>收藏&nbsp; {$collcount}</b></em></a>
+    </div>
+    <if condition="$count eq 0">
+        <h3>作者暂时没有关注对象</h3>
+    <else />
+        <div class="follow-info">
+            <div class="listShow">
+                <div class="row">
+                    <foreach name="res" item="v">
+                        <div class="col-sm-4" style="padding-bottom: 20px">
+                            <div class="row">
+                                <div class="col-sm-3 user-head">
+                                    <a href="__CONTROLLER__/showAuthor/author/{$v.followed.id}"><img src="__PUBLIC__/{$v.followed.picture}" class="img-circle" /></a>
+                                </div>
+                                <div class="col-sm-9 user-info" >
+                                    <p class="name"><a href="__CONTROLLER__/showAuthor/author/{$v.followed.id}">{$v.followed.name}</a></p>
+                                    <p>{$v.followed.per_signature}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </foreach>
+                </div>
+
+            </div>
+        </div>
+    </if>
+</div>

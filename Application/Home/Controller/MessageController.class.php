@@ -11,7 +11,7 @@ class MessageController extends Controller{
             $this->assign('user',$user);
         }
         $model = M('messages');
-        $res = $model->where('user_id=1000')->order("create_time desc")->select();
+        $res = $model->where('user_id='.$_SESSION['user_id'])->order("create_time desc")->select();
 
         if($res){
             $_SESSION['messages'] = count($res);//将消息数更新进会话

@@ -1,0 +1,119 @@
+<style>
+    .fans{
+        min-width: 1200px;
+        margin-bottom: 30px;
+    }
+    .menu{
+        color: #666;
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+    .menu a{
+        color: #666;
+    }
+    .fan-info{
+        margin-top: 30px;
+    }
+    .menu-tab{
+        border: 1px solid #e0e0e0;
+        height: 40px;
+        line-height: 36px;
+    }
+    .menu-tab a{
+        text-align: center;
+        display: inline-block;
+        height: 100%;
+        width: 150px;
+        color: #666;
+    }
+    .menu-tab .menu-tab-fan{
+        text-align: center;
+        display: inline-block;
+        height: 100%;
+        width: 150px;
+        background: #9B410E;
+        color: #fff;
+    }
+    .menu-tab a:hover{
+        text-decoration: none;
+        color: #9B410E;
+    }
+    .fan-info{
+        border: 1px solid #e0e0e0;
+        padding: 30px 30px;
+        margin-top: 0;
+    }
+    .fan-info p{
+        font-size: 12px;
+        color: #999;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .fan-info img{
+        width: 60px;
+        height: 60px;
+    }
+    .fan-info .name{
+        font-size: 16px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    .fan-info .name a{
+        color: #333;
+
+    }
+    .fan-info .user-info{
+        margin-left: -20px;
+    }
+    .fan-info .user-info .btn1{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    .showmore{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .showmore a{
+        color: #999;
+
+    }
+    .showmore a:hover{
+        text-decoration: none;
+    }
+
+</style>
+
+<div class="fans container">
+    <div class="menu">
+        <span><a href="__CONTROLLER__/showAuthor/author/{$author_id}">Ta的主页</a> > <span>粉丝</span></span>
+    </div>
+    <div class="menu-tab">
+        <a href="__CONTROLLER__/follow/author/{$author_id}" class="menu-tab-follow"><em><b>关注&nbsp; {$follow_count}</b></em></a>&nbsp;
+        <span class="menu-tab-fan"><em><b>粉丝&nbsp; {$count}</b></em></span>&nbsp;
+        <a href="__CONTROLLER__/followStory/author/{$author_id}" class="menu-tab-follow-story"><em><b>收藏&nbsp; {$collcount}</b></em></a>
+    </div>
+    <if condition="$count eq 0">
+        <h3>作者暂时还没有粉丝</h3>
+    <else />
+        <div class="fan-info">
+            <div class="listShow">
+                <div class="row">
+                    <foreach name="res" item="v">
+                        <div class="col-sm-4" style="padding-bottom: 20px">
+                            <div class="row">
+                                <div class="col-sm-3 user-head">
+                                    <a href="__CONTROLLER__/showAuthor/author/{$v.fan.id}"><img src="__PUBLIC__/{$v.fan.picture}" class="img-circle" /></a>
+                                </div>
+                                <div class="col-sm-9 user-info" >
+                                    <p class="name"><a href="__CONTROLLER__/showAuthor/author/{$v.fan.id}">{$v.fan.name}</a></p>
+                                    <p>{$v.fan.per_signature}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </foreach>
+                </div>
+            </div>
+        </div>
+    </if>
+</div>

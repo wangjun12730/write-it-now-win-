@@ -22,12 +22,58 @@
     </style>
 </head>
 <body style="background-color: #F2F2F2">
+<nav class="navbar navbar-default navbar-fixed-top" style="min-width: 1200px;font-size: 16px">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="display: inline-block;margin-top: -15px"><img src="__PUBLIC__/image/background/logo1.png" style="height: 50px;width: 100px"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="__MODULE__/Index/index">首页</a></li>
+                <li><a href="#">讨论区</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <if condition="$Think.session.user_name eq null">
+                    <li><a href="__MODULE__/User/login" target="_blank">登录</a></li>
+                    <li><a href="__MODULE__/User/register" style="margin-right: 50px">注册</a></li>
+                    <else />
+                    <li><button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-edit" style="color: #ebccd1;"></span>&nbsp;&nbsp;创作中心</button></li>
+                    <li><a href="#"><span title="收藏" class="glyphicon glyphicon-star" style="color: #ebccd1;font-size: 18px;margin-right: -10px"></span></a></li>
+                    <li><a href="#"><span title="消息" class="glyphicon glyphicon-bell" style="color: #ebccd1;font-size: 18px;margin-right: 10px"></span></a></li>
+                    <li class="dropdown" style="margin-right: 50px">
+                        <a href="#" class="dropdown-toggle" target="_blank" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: inline-block;padding: 0;margin-top: 5px"><img src="__PUBLIC__/{$Think.session.user_picture}" class="img-circle" style="height: 40px;width: 40px" /></a>
+                        <ul class="dropdown-menu" style="color: #333">
+                            <li><a href="#" style="margin-left: 0"><span class="glyphicon glyphicon-heart" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的关注</a></li>
+                            <li><a href="#" style="margin-left: 0"><span class="glyphicon glyphicon-star" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的收藏</a></li>
+                            <li><a href="__MODULE__/User/index" style="margin-left: 0"><span class="glyphicon glyphicon-user" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 个人中心</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#" style="margin-left: 0"><span class="glyphicon glyphicon-book" style="color: #ebccd1"></span>&nbsp; &nbsp;&nbsp;我的小说</a></li>
+                            <li><a href="#" style="margin-left: 0"><span class="glyphicon glyphicon-pencil" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的说说</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#" style="margin-left: 0"><span class="glyphicon glyphicon-question-sign" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 帮助</a></li>
+                            <li><a href="__MODULE__/User/logout" style="margin-left: 0"><span class="glyphicon glyphicon-log-out" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 退出</a></li>
+                        </ul>
+                    </li>
+                </if>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 <div class="container" style="background-color: white;margin-top: 100px;padding-bottom: 30px;padding-top: 20px">
     <div class="row">
         <div class="col-sm-2 col-xs-5">
             <!--创建模态框	 -->
             <a href="#" data-toggle="modal" data-target="#myModal1">
-                <img src="__PUBLIC__/{$user.picture}" alt="..." class="img-circle" style="width: 100px">
+                <img src="__PUBLIC__/{$user.picture}" alt="..." class="img-circle" style="width: 100px;height: 100px">
             </a>
             <br />
             <br />
@@ -60,7 +106,7 @@
         </div>
     </div>
 </div>
-<div class="container" style="background-color: white;margin-top: 15px;padding-top: 15px">
+<div class="container" style="background-color: white;margin-top: 15px;padding-top: 15px;margin-bottom: 30px">
     <div class="row" style="margin-left: 5px">
         <div class="col-sm-1" onclick="location='__MODULE__/User/index'">
             <h4 class="hj1" style="color:red">栏目 {$Think.session.story_count}</h4>
@@ -68,19 +114,19 @@
         </div>
         <div class="col-sm-1">
             <h4 class="hj1">说说</h4>
-            <div class="dliv"></div>
+            <div class="dliv" style="width:70px;"></div>
         </div>
-        <div class="col-sm-1">
-            <h4 class="hj1">收藏</h4>
-            <div class="dliv"></div>
+        <div class="col-sm-1" onclick="location='__MODULE__/User/collection'">
+            <h4 class="hj1">收藏 {$Think.session.collection}</h4>
+            <div class="dliv" style="width:70px;"></div>
         </div>
-        <div class="col-sm-1">
-            <h4 class="hj1">关注</h4>
-            <div class="dliv"></div>
+        <div class="col-sm-1" onclick="location='__MODULE__/User/follow'">
+            <h4 class="hj1">关注 {$Think.session.follow}</h4>
+            <div class="dliv" style="width:70px;"></div>
         </div>
-        <div class="col-sm-1">
-            <h4 class="hj1">专栏</h4>
-            <div class="dliv"></div>
+        <div class="col-sm-1" onclick="location='__MODULE__/User/fan'">
+            <h4 class="hj1">粉丝 {$Think.session.fan}</h4>
+            <div class="dliv" style="width:70px;"></div>
         </div>
         <div class="col-sm-1" onclick="location='__MODULE__/Checking/checkingList'">
             <h4 class="hj1">审核 {$Think.session.check}</h4>
@@ -105,7 +151,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-2 col-xs-12">
-                    <img src="__PUBLIC__/{$story.picture}" style="width: 150px;height: 150px"/>
+                    <img src="__PUBLIC__/{$story.picture}" style="width: 150px;height: 180px"/>
                 </div>
                 <div class="col-sm-8 col-xs-12" style="padding-top: 20px">
                     <h4 style="display: inline">{$story.name}</h4><span style="border: 1px solid red;margin-left: 5px;color: #8B6914">{$story.tag}</span>
@@ -129,11 +175,11 @@
             <a href="__CONTROLLER__/alterSection/s_id/{$story.id}/section_id/{$result.id}" >修改</a>
         </div>
         <br />
-        <div class="content col-sm-8" style="margin-top: 30px">
+        <div class="content col-sm-12" style="margin-top: 30px">
             <p>
                 {$result.content}
             </p>
-            <div class="text-center" style="margin-top: 50px">
+            <div class="text-center" style="margin-top: 50px;margin-bottom: 30px">
                 <button class="btn btn-danger" style="margin-right: 30px" onclick="location='__ACTION__/section_id/{$pre}'">{$pre_section}</button>
                 <button class="btn btn-danger" style="margin-right: 30px" onclick="location='__CONTROLLER__/authourStoryShow/s_id/{$story.id}'">目录</button>
                 <button class="btn btn-danger" style="margin-right: 30px" onclick="location='__ACTION__/section_id/{$next}'">{$next_section}</button>
@@ -152,7 +198,7 @@
                     <h5 class="modal-title" id="myModalLabel1" align="left">更换头像</h5>
                 </div>
                 <div class="modal-body" align="left">
-                    <div style="height:40%;background-image:url({$user.picture});background-repeat: no-repeat;background-size: cover;" >
+                    <div style="height: 300px;background-image:url(__PUBLIC__/{$user.picture});background-repeat: no-repeat;background-size: cover;" >
 
                     </div>
                     <div style="height:20%">
@@ -227,7 +273,7 @@
 <!--新建栏目 Modal -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-        <form class="form-horizontal" method="post" action="__CONTROLLER__/createStory">
+        <form class="form-horizontal" method="post" action="__MODULE__/User/createStory"  enctype="multipart/form-data">
             <div class="modal-content">
                 <div class="modal-header" style="background:#6495ED">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -235,55 +281,50 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <div class="col-sm-2 col-xs-2"></div>
-                        <div class="col-sm-8 col-xs-8">
+                        <div class="col-sm-10 col-xs-12">
                             <div class="form-group">
-                                <label for="name" class="col-sm-2 control-label">栏目名称</label>
-                                <div class="col-sm-10">
+                                <label for="name" class="col-sm-3 control-label">栏目名称</label>
+                                <div class="col-sm-9">
                                     <input type="text" id="name" class="form-control" name="name" />
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="tag" class="col-sm-2 control-label">标签</label>
-                                <div class="col-sm-10">
+                                <label for="tag" class="col-sm-3 control-label">标签</label>
+                                <div class="col-sm-9">
                                     <select class="form-control" id="tag" name="tag">
                                         <option selected>武侠</option>
                                         <option >恐怖</option>
-                                        <option >言情</option>
-                                        <option >推理</option>
+                                        <option >都市</option>
                                         <option >悬疑</option>
                                         <option >历史</option>
                                         <option >军事</option>
                                         <option >科幻</option>
-                                        <option >网游</option>
+                                        <option >游戏</option>
                                         <option >玄幻</option>
-                                        <option >逸体</option>
-                                        <option >耽美</option>
                                         <option >穿越</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="info" class="col-sm-2 control-label">简介</label>
-                                <div class="col-sm-10">
+                                <label for="info" class="col-sm-3 control-label">简介</label>
+                                <div class="col-sm-9">
                                     <input type="text" class="form-control" id="info" name="info" >
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="picture" class="col-sm-2 control-label">图片</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="picture" name="picture" >
+                            <div class="form-group ">
+                                <label for="filename" class="col-sm-3 control-label" >上传图片</label>
+                                <div class="col-sm-9">
+                                    <input type="file" class="form-control" id="filename" name="file">
                                 </div>
                             </div>
 
                         </div>
-                        <div class="col-sm-2 col-xs-2"></div>
                     </div>
 
                 </div>
                 <div class="modal-footer" style="background:#B0E0E6;margin-bottom:-30px;">
-                    <input type="hidden" name="user_name" value="王俊" />
-                    <input type="hidden" name="user_id" value="1000" />
+                    <input type="hidden" name="user_name" value="{$user.name}" />
+                    <input type="hidden" name="user_id" value="{$user.id}" />
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                     <button type="submit" class="btn btn-primary">保存</button>
                 </div>
@@ -304,5 +345,8 @@
         });
     });
 </script>
+<!--footer-->
+<footer style="min-width:1200px;height: 200px;padding-top: 50px;background-color: #f8f8f8;text-align: center"><h3>write it now!</h3>
+    <h3>win</h3></footer>
 </body>
 </html>
