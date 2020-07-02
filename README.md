@@ -1,7 +1,7 @@
 ﻿**简介**
 
 本系统为write-it-now(win)写作网，提供网上平台给用户写作和阅读小说作品，给用户一种更好的享受体验。
-本项目基于php,html,js,等编程语言编程，后台使用框架thinkphp，前台使用框架jquery,bootstrap。
+本项目基于php,html,js,等编程语言编程，服务器端使用框架thinkphp，前端使用框架jquery,bootstrap。
 
 **项目部署及运行**
 
