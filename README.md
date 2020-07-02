@@ -10,3 +10,13 @@ db_win解压缩后放入phpstudy/MYSQL/data 目录下；
 
 进入项目首页URL "localhost/write-it-now-win-/index.php/Home/Index/index"
 进入管理员首页URL "localgost/write-it-now-win-/index.php/Admin/Index/index"  
+
+
+管理员账号：wangjun 
+密码：@wangjun  
+管理员账号：wangkun 
+密码：@wangkun  
+管理员账号：yangxinyue 
+密码：@yangxinyue
+管理员账号：zhimeihang 
+密码：@zhimeihang
