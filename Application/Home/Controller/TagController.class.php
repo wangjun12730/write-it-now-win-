@@ -10,6 +10,7 @@ use Think\Controller;
              case '都市':
                  $this->assign('tag','都市');
                  $this->assign('bg','dushi.jpg');
+
                  //新书推荐
                  $newbook = M('stories_1000')->where("tag='".$type."'")->limit(9)->order('create_time desc')->select();
                  $this->assign('newbook',$newbook);
@@ -40,6 +41,7 @@ use Think\Controller;
              case '武侠':
                  $this->assign('tag','武侠');
                  $this->assign('bg','wuxia.jpg');
+
                  //新书推荐
                  $newbook = M('stories_1000')->where("tag='".$type."'")->limit(9)->order('create_time desc')->select();
                  $this->assign('newbook',$newbook);
@@ -55,6 +57,7 @@ use Think\Controller;
              case '玄幻':
                  $this->assign('tag','玄幻');
                  $this->assign('bg','xuanhuan.jpg');
+
                  //新书推荐
                  $newbook = M('stories_1000')->where("tag='".$type."'")->limit(9)->order('create_time desc')->select();
                  $this->assign('newbook',$newbook);
@@ -70,6 +73,7 @@ use Think\Controller;
              case '军事':
                  $this->assign('tag','军事');
                  $this->assign('bg','junshi.jpg');
+
                  //新书推荐
                  $newbook = M('stories_1000')->where("tag='".$type."'")->limit(9)->order('create_time desc')->select();
                  $this->assign('newbook',$newbook);
@@ -85,6 +89,7 @@ use Think\Controller;
              case '穿越':
                  $this->assign('tag','穿越');
                  $this->assign('bg','chuanyue.jpg');
+
                  //新书推荐
                  $newbook = M('stories_1000')->where("tag='".$type."'")->limit(9)->order('create_time desc')->select();
                  $this->assign('newbook',$newbook);
@@ -100,6 +105,7 @@ use Think\Controller;
              case '恐怖':
                  $this->assign('tag','恐怖');
                  $this->assign('bg','kongbu.jpg');
+
                  //新书推荐
                  $newbook = M('stories_1000')->where("tag='".$type."'")->limit(9)->order('create_time desc')->select();
                  $this->assign('newbook',$newbook);
@@ -115,6 +121,7 @@ use Think\Controller;
              case '科技':
                  $this->assign('tag','科技');
                  $this->assign('bg','keji.jpg');
+
                  //新书推荐
                  $newbook = M('stories_1000')->where("tag='".$type."'")->limit(9)->order('create_time desc')->select();
                  $this->assign('newbook',$newbook);
@@ -130,6 +137,7 @@ use Think\Controller;
              case '悬疑':
                  $this->assign('tag','悬疑');
                  $this->assign('bg','xuanyi.jpg');
+
                  //新书推荐
                  $newbook = M('stories_1000')->where("tag='".$type."'")->limit(9)->order('create_time desc')->select();
                  $this->assign('newbook',$newbook);
@@ -145,6 +153,7 @@ use Think\Controller;
              case '历史':
                  $this->assign('tag','历史');
                  $this->assign('bg','lishi.jpg');
+
                  //新书推荐
                  $newbook = M('stories_1000')->where("tag='".$type."'")->limit(9)->order('create_time desc')->select();
                  $this->assign('newbook',$newbook);
@@ -165,6 +174,7 @@ use Think\Controller;
      public function endingStory(){
          $this->assign('tag','完结');
          $this->assign('bg','wanjie.jpg');
+
          //人气书籍
          $hot_book = M('stories_1000')->where("is_doing = '1'")->limit(9)->order('click_total_count desc')->select();
          $this->assign('hot_book',$hot_book);
