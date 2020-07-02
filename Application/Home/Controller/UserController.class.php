@@ -7,68 +7,78 @@ class UserController extends Controller
 {
     //登录
     public function login(){
-        if (IS_POST){
+        if (IS_POST) {
             //检测验证码
             $this->checkVerify(I('post.captcha'));
             //检测账号密码是否正确
-            $tel=I('post.tel','','');
-            $pwd=md5(I('post.pwd','',''));
-            $rst=D('Members')->checkUser($tel,$pwd);
-            if ($rst!==true){
+            $tel = I('post.tel', '', '');
+            $pwd = md5(I('post.pwd', '', ''));
+            $rst = D('Members')->checkUser($tel, $pwd);
+            if ($rst !== true) {
                 $this->error($rst);
             }
-            $members = M('members')->where('tel='.$tel)->find();//查询用户信息
-            //将获取的用户信息存入会话
-            $_SESSION['user_id'] =$members['id'];
-            $_SESSION['user_name'] = $members['name'];
-            $_SESSION['user_picture'] = $members['picture'];
-            //获取用户栏目数
-            $members1 = M('stories_1000')->where('user_id='.$members['id'])->select();
-            if(is_array($members1)){//判断是否获取到栏目
-                $_SESSION['story_count'] = count($members1);  //如果有栏目则将栏目数存入会话
-            }else{
-                $_SESSION['story_count'] = "0"; //没有栏目，则将栏目数会话设置为0
-            }
-            //获取用户消息数
-            $members2 = M('messages')->where('user_id='.$members['id'])->select();
-            if(is_array($members2)){//判断是否获取到消息
-                $_SESSION['messages'] = count($members2);  //如果有消息则将消息数存入会话
-            }else{
-                $_SESSION['messages'] = "0"; //没有消息，则将消息会话设置为0
-            }
-            //获取用户审核章节数，并存入会话
-            $members3 = M('stories_check')->where(array('user_id'=>$members['id'],"is_check"=>"0"))->select();
-            if(is_array($members3)){//判断是否获取到审核数
-                $_SESSION['check'] = count($members3);  //如果有审核则将审核数存入会话
-            }else{
-                $_SESSION['check'] = "0"; //没有审核，则将审核会话设置为0
-            }
+            $members = M('members')->where('tel=' . $tel)->find();//查询用户信息
 
-            //获取登录用户关注作者数
-            $follow = M('follow')->where('fan_id='.$members['id'])->select();
-            if($follow){
-                $_SESSION['follow'] = count($follow);  //设置会话变量
-            }else{
-                $_SESSION['follow'] = 0;
-            }
+            //获取当前时间
+            date_default_timezone_set('PRC');//设置中国时区
+            $time = date('Y-m-d G:i:s', time());
 
-            //获取用户粉丝数
-            $fan = M('follow')->where('author_id='.$members['id'])->select();
-            if($fan){
-                $_SESSION['fan'] = count($fan);  //设置会话变量
-            }else{
-                $_SESSION['fan'] = 0;
-            }
-            //获取用户关注文章数
-            $collection = M('collection')->where('follower_id='.$members['id'])->select();
-            if($collection){
-                $_SESSION['collection'] = count($collection);  //设置会话变量
-            }else{
-                $_SESSION['collection'] = 0;
-            }
+            if ($members['is_ban'] == null or ($members['is_ban'] < $time)) {//查看用户是否被封禁
+                $is = M('members')->where('id='.$members['id'])->setField('is_ban',null);  //将用户封禁时间设置为0
+                //将获取的用户信息存入会话
+                $_SESSION['user_id'] = $members['id'];
+                $_SESSION['user_name'] = $members['name'];
+                $_SESSION['user_picture'] = $members['picture'];
+                //获取用户栏目数
+                $members1 = M('stories_1000')->where('user_id=' . $members['id'])->select();
+                if (is_array($members1)) {//判断是否获取到栏目
+                    $_SESSION['story_count'] = count($members1);  //如果有栏目则将栏目数存入会话
+                } else {
+                    $_SESSION['story_count'] = "0"; //没有栏目，则将栏目数会话设置为0
+                }
+                //获取用户消息数
+                $members2 = M('messages')->where('user_id=' . $members['id'])->select();
+                if (is_array($members2)) {//判断是否获取到消息
+                    $_SESSION['messages'] = count($members2);  //如果有消息则将消息数存入会话
+                } else {
+                    $_SESSION['messages'] = "0"; //没有消息，则将消息会话设置为0
+                }
+                //获取用户审核章节数，并存入会话
+                $members3 = M('stories_check')->where(array('user_id' => $members['id'], "is_check" => "0"))->select();
+                if (is_array($members3)) {//判断是否获取到审核数
+                    $_SESSION['check'] = count($members3);  //如果有审核则将审核数存入会话
+                } else {
+                    $_SESSION['check'] = "0"; //没有审核，则将审核会话设置为0
+                }
 
-            $this->success('登录成功！',U('Index/index'));
-            return;
+                //获取登录用户关注作者数
+                $follow = M('follow')->where('fan_id=' . $members['id'])->select();
+                if ($follow) {
+                    $_SESSION['follow'] = count($follow);  //设置会话变量
+                } else {
+                    $_SESSION['follow'] = 0;
+                }
+
+                //获取用户粉丝数
+                $fan = M('follow')->where('author_id=' . $members['id'])->select();
+                if ($fan) {
+                    $_SESSION['fan'] = count($fan);  //设置会话变量
+                } else {
+                    $_SESSION['fan'] = 0;
+                }
+                //获取用户关注文章数
+                $collection = M('collection')->where('follower_id=' . $members['id'])->select();
+                if ($collection) {
+                    $_SESSION['collection'] = count($collection);  //设置会话变量
+                } else {
+                    $_SESSION['collection'] = 0;
+                }
+
+                $this->success('登录成功！', U('Index/index'));
+                return;
+            }else{
+                echo "<script>alert('你涉嫌违规操作！已被封禁至".$members['is_ban']."')</script>";
+            }
         }
         $this->display();
     }

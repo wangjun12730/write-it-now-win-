@@ -20,7 +20,7 @@ class LoginController extends Controller{
 
 
                 //统计需要审核的消息数
-                $res2 = M('stories_check')->where('is_check=0')->select();
+                $res2 = M('stories_check')->where("is_check= '0'")->select();
                 if(is_array($res2)){
                     session('checking',count($res2));  //如果有审核数设置checking会话为查询到的数目
                 }else{
