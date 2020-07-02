@@ -208,22 +208,22 @@
     <div id="box" style="margin-top: 100px">
         <div id="search">
             <ul class="menu">
-                <li><i type="button" class="fa fa-search" aria-hidden="true" name="popBox" onclick="popBox()"></i> </li>
-                <li><a href="/write-it-now-win-/Home/Tag/tag/type/都市" target="_blank">都市</a></li>
-                <li><a href="/write-it-now-win-/Home/Tag/tag/type/武侠" target="_blank">武侠</a></li>
-                <li><a href="/write-it-now-win-/Home/Tag/tag/type/游戏" target="_blank">游戏</a></li>
-                <li><a href="/write-it-now-win-/Home/Tag/tag/type/玄幻" target="_blank">玄幻</a></li>
-                <li><a href="/write-it-now-win-/Home/Tag/tag/type/军事" target="_blank">军事</a></li>
-                <li><a href="/write-it-now-win-/Home/Tag/tag/type/穿越" target="_blank">穿越</a></li>
-                <li><a href="/write-it-now-win-/Home/Tag/tag/type/恐怖" target="_blank">恐怖</a></li>
-                <li><a href="/write-it-now-win-/Home/Tag/tag/type/科技" target="_blank">科技</a></li>
-                <li><a href="/write-it-now-win-/Home/Tag/tag/type/悬疑" target="_blank">悬疑</a></li>
-                <li><a href="/write-it-now-win-/Home/Tag/tag/type/历史" target="_blank">历史</a></li>
-                <li><a href="/write-it-now-win-/Home/Tag/endingStory">完结</a></li>
+                <li><i style="border: 1px solid #454545;" type="button" class="fa fa-search" aria-hidden="true" name="popBox" onclick="popBox()"></i> </li>
+                <li><a style="border: 1px solid #454545;" href="/write-it-now-win-/Home/Tag/tag/type/都市" target="_blank">都市</a></li>
+                <li><a style="border: 1px solid #454545;" href="/write-it-now-win-/Home/Tag/tag/type/武侠" target="_blank">武侠</a></li>
+                <li><a  style="border: 1px solid #454545;"href="/write-it-now-win-/Home/Tag/tag/type/游戏" target="_blank">游戏</a></li>
+                <li><a style="border: 1px solid #454545;" href="/write-it-now-win-/Home/Tag/tag/type/玄幻" target="_blank">玄幻</a></li>
+                <li><a style="border: 1px solid #454545;" href="/write-it-now-win-/Home/Tag/tag/type/军事" target="_blank">军事</a></li>
+                <li><a style="border: 1px solid #454545;" href="/write-it-now-win-/Home/Tag/tag/type/穿越" target="_blank">穿越</a></li>
+                <li><a style="border: 1px solid #454545;" href="/write-it-now-win-/Home/Tag/tag/type/恐怖" target="_blank">恐怖</a></li>
+                <li><a style="border: 1px solid #454545;" href="/write-it-now-win-/Home/Tag/tag/type/科技" target="_blank">科技</a></li>
+                <li><a style="border: 1px solid #454545;" href="/write-it-now-win-/Home/Tag/tag/type/悬疑" target="_blank">悬疑</a></li>
+                <li><a style="border: 1px solid #454545;" href="/write-it-now-win-/Home/Tag/tag/type/历史" target="_blank">历史</a></li>
+                <li><a style="border: 1px solid #454545;" href="/write-it-now-win-/Home/Tag/endingStory">完结</a></li>
             </ul>
             <p>
             <ul class="back">
-                <li><a href="/write-it-now-win-/Home/Index/index"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a></li>
+                <li ><a  href="/write-it-now-win-/Home/Index/index"><i style="border: 1px solid #454545;" class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a></li>
             </ul></p>
         </div>
         <div class="clear"></div>
@@ -609,52 +609,52 @@
             <div class="col-sm-4 col-md-3 col-xs-12"style="margin-bottom: 20px">
                 <h4 style="border-bottom: 1px solid black;width: 100%;padding-bottom: 5px">历史&nbsp;·&nbsp;军事<img src="/write-it-now-win-/Public/image/background/cate03.png" /></h4>
                 <div class="hot-book-list">
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
+                    <p><span>「历史」</span><a>唐朝贵公子</a></p>
+                    <p><span>「军事」</span><a>密战无痕</a></p>
+                    <p><span>「军事」</span><a>军旗永辉</a></p>
+                    <p><span>「军事」</span><a>大秦工程兵</a></p>
+                    <p><span>「历史」</span><a>盛唐日月</a></p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-3 col-xs-12" style="margin-bottom: 20px">
                 <h4 style="border-bottom: 1px solid black;width: 100%;padding-bottom: 5px">武侠&nbsp;·&nbsp;科幻<img src="/write-it-now-win-/Public/image/background/cate04.png" /></h4>
                 <div class="hot-book-list">
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
+                    <p><span>「科幻」</span><a>欢想世界</a></p>
+                    <p><span>「武侠」</span><a>医不容慈</a></p>
+                    <p><span>「科幻」</span><a>改变大唐之李元霸</a></p>
+                    <p><span>「武侠」</span><a>少侠请开恩</a></p>
+                    <p><span>「科幻」</span><a>墨家科技</a></p>
 
                 </div>
             </div>
             <div class="col-sm-4 col-md-3 col-xs-12" style="margin-bottom: 20px">
                 <h4 style="border-bottom: 1px solid black;width: 100%;padding-bottom: 5px">恐怖&nbsp;·&nbsp;悬疑<img src="/write-it-now-win-/Public/image/background/cate05.png" /></h4>
                 <div class="hot-book-list">
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
+                    <p><span>「恐怖」</span><a>霸道总裁爱上我</a></p>
+                    <p><span>「悬疑」</span><a>超级侦探系统</a></p>
+                    <p><span>「恐怖」</span><a>霸道总裁爱上我</a></p>
+                    <p><span>「恐怖」</span><a>霸道总裁爱上我</a></p>
+                    <p><span>「悬疑」</span><a>我在创造神话世界</a></p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-3 col-xs-12" style="margin-bottom: 20px">
                 <h4 style="border-bottom: 1px solid black;width: 100%;padding-bottom: 5px">穿越&nbsp;·&nbsp;游戏<img src="/write-it-now-win-/Public/image/background/cate06.png" /></h4>
                 <div class="hot-book-list">
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
+                    <p><span>「穿越」</span><a>穿越法则</a></p>
+                    <p><span>「游戏」</span><a>网游之刺灵：千里不留行</a></p>
+                    <p><span>「游戏」</span><a>网游之混沌御主</a></p>
+                    <p><span>「游戏」</span><a>灵魂监牢</a></p>
+                    <p><span>「穿越」</span><a>狂帝从零崛起</a></p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-3 col-xs-12" style="margin-bottom: 20px">
                 <h4 style="border-bottom: 1px solid black;width: 100%;padding-bottom: 5px">二次元<img src="/write-it-now-win-/Public/image/background/cate07.png" /></h4>
                 <div class="hot-book-list">
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
-                    <p><span>「玄幻」</span><a>霸道总裁爱上我</a></p>
+                    <p><span>「二次元」</span><a>GMAI人形少女：超能力</a></p>
+                    <p><span>「二次元」</span><a>崩坏骑士传：对抗崩坏</a></p>
+                    <p><span>「二次元」</span><a>渡魂猫</a></p>
+                    <p><span>「二次元」</span><a>超能公寓</a></p>
+                    <p><span>「二次元」</span><a>拯救世界吧少年</a></p>
 
                 </div>
             </div>

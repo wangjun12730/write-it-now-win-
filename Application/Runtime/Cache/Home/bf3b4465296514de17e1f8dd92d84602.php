@@ -283,7 +283,7 @@
                         </div>
                         <div class="col-sm-6 author-book">
                             <div class="row">
-                                <?php $__FOR_START_10353__=0;$__FOR_END_10353__=$v["bookcount"];for($i=$__FOR_START_10353__;$i < $__FOR_END_10353__;$i+=1){ if($i < 6): ?><div class="col-sm-2" style="margin-left: -10px">
+                                <?php $__FOR_START_12019__=0;$__FOR_END_12019__=$v["bookcount"];for($i=$__FOR_START_12019__;$i < $__FOR_END_12019__;$i+=1){ if($i < 6): ?><div class="col-sm-2" style="margin-left: -10px">
                                             <a href="/write-it-now-win-/Home/StoryShow/readerStoryShow/s_id/<?php echo ($v['authorbook'][$i]['id']); ?>" style="color: black">
                                                 <p><img src="/write-it-now-win-/Public/<?php echo ($v['authorbook'][$i]['picture']); ?>"></p>
                                                 <p><?php echo ($v['authorbook'][$i]['name']); ?></p>

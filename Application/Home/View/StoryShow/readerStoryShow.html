@@ -158,6 +158,9 @@
     .fr .zan{
         margin-right: 15px;
     }
+    .fr a:hover{
+        text-decoration: none;
+    }
 </style>
 
 <div class="container info">
@@ -275,10 +278,10 @@
                                         {$v[4]}
                                     </p>
                                     <p class="fr">
-                                        <span class="zan">
-                                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                                        <a class="zan" href="__MODULE__/Comments/like/author_id/{$res.user_id}/story_id/{$res.id}/com_id/{$v.user_info.id}/com_content/{$v[1]}">
+                                            <span class="glyphicon glyphicon-thumbs-up" ></span>
                                             <span>{$v.like_count}</span>
-                                        </span>
+                                        </a>
                                     </p>
                                 </div>
                             </div>
@@ -318,6 +321,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 

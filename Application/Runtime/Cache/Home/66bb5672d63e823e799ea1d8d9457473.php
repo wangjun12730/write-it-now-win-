@@ -217,6 +217,9 @@
     .fr .zan{
         margin-right: 15px;
     }
+    .fr a:hover{
+        text-decoration: none;
+    }
 </style>
 
 <div class="container info">
@@ -327,10 +330,10 @@
                                         <?php echo ($v[4]); ?>
                                     </p>
                                     <p class="fr">
-                                        <span class="zan">
-                                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                                        <a class="zan" href="/write-it-now-win-/Home/Comments/like/author_id/<?php echo ($res["user_id"]); ?>/story_id/<?php echo ($res["id"]); ?>/com_id/<?php echo ($v["user_info"]["id"]); ?>/com_content/<?php echo ($v[1]); ?>">
+                                            <span class="glyphicon glyphicon-thumbs-up" ></span>
                                             <span><?php echo ($v["like_count"]); ?></span>
-                                        </span>
+                                        </a>
                                     </p>
                                 </div>
                             </div>
@@ -369,6 +372,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 

@@ -1,5 +1,5 @@
 <?php
-namespace Admin\Controller;
+namespace Home\Controller;
 use Think\Controller;
 use Think\Page;
 class DiscussController extends Controller {
@@ -15,34 +15,34 @@ class DiscussController extends Controller {
         $users=$user_model->limit("$page->firstRow,$page->listRows")->order("id desc")->select();
         $this-> assign('users',$users);
         $this-> assign('pageControl', $pageControl);
-        $this-> display();        
+        $this-> display();
     }
-    
-	/**
-	 * 留言列表
-	 */
-	public function listAction(){
-		//实例化comment模型
-		$commentModel = new \Home\Model\DiscussModel();
-		//取得留言总数
-		$num = $commentModel->getNumber();
-		//取得所有留言数据
-		$data = $commentModel->getAll($page->getLimit());
-		//载入视图文件
-		require './Application/Home/View/disscuss_list.html';
-	}
-	
-		/**
-	 * 发表留言
-	 */
-	public function addAction(){
-		//判断是否是POST方式提交
-		if(empty($_POST)){
-			return false;
-		}
-		//实例化comment模型
-		$commentModel = new \Home\Model\DiscussModel();
-		//调用insert方法
-		$pass = $commentModel->insert();
-	}
+
+    /**
+     * 留言列表
+     */
+    public function listAction(){
+        //实例化comment模型
+        $commentModel = new \Home\Model\DiscussModel();
+//        //取得留言总数
+//        $num = $commentModel->getNumber();
+//        //取得所有留言数据
+//        $data = $commentModel->getAll($page->getLimit());
+        //载入视图文件
+        require './Application/Home/View/discuss_list.html';
+    }
+
+    /**
+     * 发表留言
+     */
+    public function addAction(){
+        //判断是否是POST方式提交
+        if(empty($_POST)){
+            return false;
+        }
+        //实例化comment模型
+        $commentModel = new \Home\Model\DiscussModel();
+        //调用insert方法
+        $pass = $commentModel->insert();
+    }
 }

@@ -91,6 +91,21 @@ class UserController extends Controller
                 if ($rst === false) {
                     $this->error($rst->getError());
                 }
+
+                //获取注册账号id等信息
+                $info = M('members')->order("id desc")->find();
+                if($info){
+                    //在json文件创建一个该id的对象，用于书籍的存评论点赞等
+                    //获取json文件内容
+                    $json_string = file_get_contents("./Public/json/info.json");
+                    $data = json_decode($json_string, true);
+                    $data[$info['id']] = array();
+                    //数组转换为json格式字符串并存入json文件
+                    $json_strings = json_encode($data);
+                    file_put_contents("./Public/json/info.json", $json_strings);
+                }
+
+
                 $this->success('注册成功!', U('Home/User/login'));
                 return;
             }else{
@@ -172,6 +187,20 @@ class UserController extends Controller
                     }else{
                         echo "<script>alert('移动图片失败！');location='".U('User/index')."'</script>";
                     }
+
+                    //获取最新创建栏目id等信息
+                    $info = M('stories_1000')->order("id desc")->find();
+                    if($info){
+                        //在json文件的该作者对象下创建一个该小说的对象，用于书籍的存评论点赞等
+                        //获取json文件内容
+                        $json_string = file_get_contents("./Public/json/info.json");
+                        $data = json_decode($json_string, true);
+                        $data[$_SESSION['user_id']][$info['id']] = array("书评"=>array()) ;
+                        //数组转换为json格式字符串并存入json文件
+                        $json_strings = json_encode($data);
+                        file_put_contents("./Public/json/info.json", $json_strings);
+                    }
+
                     echo "<script>alert('数据上传成功!');location='".U('User/index')."'</script>";
                 }else{
                     echo "<script>alert('上传数据库失败!');location='".U('User/index')."'</script>";
@@ -190,7 +219,7 @@ class UserController extends Controller
         //删除栏目所有的章节
         $res2 = M('stories_1000_section_0')->where('story_id='.$story_id)->delete();
 
-        if ($res2 and $res1){
+        if ($res2){
             $_SESSION['story_count'] -=1;
             echo "<script>alert('删除栏目成功!');location='".U('User/index')."'</script>";
         }else{
