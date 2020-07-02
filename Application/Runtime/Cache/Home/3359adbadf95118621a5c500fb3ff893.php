@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>WIN网站 - 注册</title>
-    <link href="/write-it-now-win-/Public/css/member.css" rel="stylesheet" />
-    <script src="/write-it-now-win-/Public/js/jquery.min.js"></script>
+    <link href="/win/write-it-now-win-/Public/css/member.css" rel="stylesheet" />
+    <script src="/win/write-it-now-win-/Public/js/jquery.min.js"></script>
 </head>
 <body>
 <div id="box">
@@ -19,9 +19,9 @@
                 <tr><th>密码：</th><td><input type="password" name="pwd" id="pwd" required /></td></tr>
                 <tr><th>确认密码：</th><td><input type="password" id="pwd2" required /></td></tr>
                 <tr><th>验证码：</th><td><input type="text" name="captcha" required /></td></tr>
-                <tr><td>&nbsp;</td><td><img src="/write-it-now-win-/Home/User/captcha" onclick="this.src='/write-it-now-win-/Home/User/captcha/'+Math.random()"/></td></tr>
+                <tr><td>&nbsp;</td><td><img src="/win/write-it-now-win-/Home/User/captcha" onclick="this.src='/win/write-it-now-win-/Home/User/captcha/'+Math.random()"/></td></tr>
                 <tr><td>&nbsp;</td><td><input class="button" type="submit" value="注　册" /></td></tr>
-                <tr><td colspan="2" class="center"><a href="/write-it-now-win-/Home/User/login">返回登录</a><a href="/write-it-now-win-/">返回首页</a></td></tr>
+                <tr><td colspan="2" class="center"><a href="/win/write-it-now-win-/Home/User/login">返回登录</a><a href="/win/write-it-now-win-/">返回首页</a></td></tr>
             </table>
         </form>
         <div class="clear"></dic>

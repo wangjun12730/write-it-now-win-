@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>write it now!</title>
-    <link href="/write-it-now-win-/Public/css/layout.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/write-it-now-win-/Public/css/font-awesome.min.css">
-    <link href="/write-it-now-win-/Public/css/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/write-it-now-win-/Public/js/jquery-3.4.1.min.js"></script>
-    <script src="/write-it-now-win-/Public/css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href="/win/write-it-now-win-/Public/css/layout.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/win/write-it-now-win-/Public/css/font-awesome.min.css">
+    <link href="/win/write-it-now-win-/Public/css/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/win/write-it-now-win-/Public/js/jquery-3.4.1.min.js"></script>
+    <script src="/win/write-it-now-win-/Public/css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
 </head>
 <body style="padding-top: 70px">
@@ -21,34 +21,34 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" style="display: inline-block;margin-top: -15px"><img src="/write-it-now-win-/Public/image/background/logo1.png" style="height: 50px;width: 100px"></a>
+            <a class="navbar-brand" href="#" style="display: inline-block;margin-top: -15px"><img src="/win/write-it-now-win-/Public/image/background/logo1.png" style="height: 50px;width: 100px"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/write-it-now-win-/Home/Index/index">首页</a></li>
+                <li class="active"><a href="/win/write-it-now-win-/Home/Index/index">首页</a></li>
                 <li><a href="#">讨论区</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <?php if($_SESSION['user_name']== null): ?><li><a href="/write-it-now-win-/Home/User/login" target="_blank">登录</a></li>
-                    <li><a href="/write-it-now-win-/Home/User/register" style="margin-right: 50px">注册</a></li>
+                <?php if($_SESSION['user_name']== null): ?><li><a href="/win/write-it-now-win-/Home/User/login" target="_blank">登录</a></li>
+                    <li><a href="/win/write-it-now-win-/Home/User/register" style="margin-right: 50px">注册</a></li>
                  <?php else: ?>
-                    <li><button type="button" class="btn btn-default navbar-btn" onclick="window.open('/write-it-now-win-/Home/User/Index');"><span class="glyphicon glyphicon-edit" style="color: #ebccd1;"></span>&nbsp;&nbsp;创作中心</button></li>
-                    <li><a href="/write-it-now-win-/Home/User/collection" target="_blank"><span title="收藏" class="glyphicon glyphicon-star" style="color: #ebccd1;font-size: 18px;margin-right: -10px"></span></a></li>
-                    <li><a href="/write-it-now-win-/Home/Message/messageList" target="_blank"><span title="消息 <?php echo (session('messages')); ?>" class="glyphicon glyphicon-bell" style="color: #ebccd1;font-size: 18px;margin-right: 10px"></span></a></li>
+                    <li><button type="button" class="btn btn-default navbar-btn" onclick="window.open('/win/write-it-now-win-/Home/User/Index');"><span class="glyphicon glyphicon-edit" style="color: #ebccd1;"></span>&nbsp;&nbsp;创作中心</button></li>
+                    <li><a href="/win/write-it-now-win-/Home/User/collection" target="_blank"><span title="收藏" class="glyphicon glyphicon-star" style="color: #ebccd1;font-size: 18px;margin-right: -10px"></span></a></li>
+                    <li><a href="/win/write-it-now-win-/Home/Message/messageList" target="_blank"><span title="消息 <?php echo (session('messages')); ?>" class="glyphicon glyphicon-bell" style="color: #ebccd1;font-size: 18px;margin-right: 10px"></span></a></li>
                     <li class="dropdown" style="margin-right: 50px">
-                        <a href="#" class="dropdown-toggle" target="_blank" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: inline-block;padding: 0;margin-top: 5px"><img src="/write-it-now-win-/Public/<?php echo (session('user_picture')); ?>" class="img-circle" style="height: 40px;width: 40px" /></a>
+                        <a href="#" class="dropdown-toggle" target="_blank" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: inline-block;padding: 0;margin-top: 5px"><img src="/win/write-it-now-win-/Public/<?php echo (session('user_picture')); ?>" class="img-circle" style="height: 40px;width: 40px" /></a>
                         <ul class="dropdown-menu" style="color: #333">
-                            <li><a href="/write-it-now-win-/Home/User/follow"><span class="glyphicon glyphicon-heart" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的关注</a></li>
-                            <li><a href="/write-it-now-win-/Home/User/collection"><span class="glyphicon glyphicon-star" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的收藏</a></li>
-                            <li><a href="/write-it-now-win-/Home/User/index"><span class="glyphicon glyphicon-user" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 个人中心</a></li>
+                            <li><a href="/win/write-it-now-win-/Home/User/follow"><span class="glyphicon glyphicon-heart" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的关注</a></li>
+                            <li><a href="/win/write-it-now-win-/Home/User/collection"><span class="glyphicon glyphicon-star" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的收藏</a></li>
+                            <li><a href="/win/write-it-now-win-/Home/User/index"><span class="glyphicon glyphicon-user" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 个人中心</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="/write-it-now-win-/Home/User/index"><span class="glyphicon glyphicon-book" style="color: #ebccd1"></span>&nbsp; &nbsp;&nbsp;我的小说</a></li>
-                            <li><a href="/write-it-now-win-/Home/User/moment"><span class="glyphicon glyphicon-pencil" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的说说</a></li>
+                            <li><a href="/win/write-it-now-win-/Home/User/index"><span class="glyphicon glyphicon-book" style="color: #ebccd1"></span>&nbsp; &nbsp;&nbsp;我的小说</a></li>
+                            <li><a href="/win/write-it-now-win-/Home/User/moment"><span class="glyphicon glyphicon-pencil" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 我的说说</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#"><span class="glyphicon glyphicon-question-sign" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 帮助</a></li>
-                            <li><a href="/write-it-now-win-/Home/User/logout"><span class="glyphicon glyphicon-log-out" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 退出</a></li>
+                            <li><a href="/win/write-it-now-win-/Home/User/logout"><span class="glyphicon glyphicon-log-out" style="color: #ebccd1"></span>&nbsp;&nbsp;&nbsp; 退出</a></li>
                         </ul>
                     </li><?php endif; ?>
             </ul>
@@ -243,11 +243,11 @@
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <div class="reader_crumb">
-            <a href="/write-it-now-win-/Home/Index/index">首页</a>
+            <a href="/win/write-it-now-win-/Home/Index/index">首页</a>
              &nbsp;>&nbsp;
             <a><?php echo ($story["tag"]); ?>频道</a>
             &nbsp;>&nbsp;
-            <a href="/write-it-now-win-/Home/StoryShow/readerStoryShow/s_id/<?php echo ($story["id"]); ?>"><?php echo ($story["name"]); ?></a>
+            <a href="/win/write-it-now-win-/Home/StoryShow/readerStoryShow/s_id/<?php echo ($story["id"]); ?>"><?php echo ($story["name"]); ?></a>
             <span> &nbsp;>&nbsp; <?php echo ($res["section"]); ?>&nbsp; <?php echo ($res["title"]); ?></span>
         </div>
             </div>
@@ -255,9 +255,9 @@
         <div class="read_content">
             <div class="row">
                 <div class="col-sm-1 book-index">
-                    <a href="/write-it-now-win-/Home/StoryShow/sectionList/s_id/<?php echo ($story["id"]); ?>"><span class="glyphicon glyphicon-list" ></span><span class="book-index-name">目录</span></a>
-                    <a href="/write-it-now-win-/Home/User/collection" target="_blank"><span class="glyphicon glyphicon-book"></span><sapn class="book-index-name">书架</sapn></a>
-                    <a href="/write-it-now-win-/Home/StoryShow/readerStoryShow/s_id/<?php echo ($story["id"]); ?>"><span class="glyphicon glyphicon-tags"></span><span class="book-index-name">书页</span></a>
+                    <a href="/win/write-it-now-win-/Home/StoryShow/sectionList/s_id/<?php echo ($story["id"]); ?>"><span class="glyphicon glyphicon-list" ></span><span class="book-index-name">目录</span></a>
+                    <a href="/win/write-it-now-win-/Home/User/collection" target="_blank"><span class="glyphicon glyphicon-book"></span><sapn class="book-index-name">书架</sapn></a>
+                    <a href="/win/write-it-now-win-/Home/StoryShow/readerStoryShow/s_id/<?php echo ($story["id"]); ?>"><span class="glyphicon glyphicon-tags"></span><span class="book-index-name">书页</span></a>
                     <a><span class="glyphicon glyphicon-cog"></span><sapn class="book-index-name">设置</sapn></a>
                 </div>
                 <div class="col-sm-10">
@@ -285,9 +285,9 @@
                     <div class="row" >
                         <div class="col-sm-10 col-sm-offset-1">
                             <div class="section-buttons">
-                                <a href="/write-it-now-win-/Home/StoryShow/storyInfo/s_id/<?php echo ($story["id"]); ?>/section/<?php echo ($pre); ?>"><?php echo ($pre_section); ?></a>&nbsp;&nbsp;
-                                <a href="/write-it-now-win-/Home/StoryShow/sectionList/s_id/<?php echo ($story["id"]); ?>">目录</a>&nbsp;&nbsp;
-                                <a href="/write-it-now-win-/Home/StoryShow/storyInfo/s_id/<?php echo ($story["id"]); ?>/section/<?php echo ($next); ?>"><?php echo ($next_section); ?></a>&nbsp;&nbsp;
+                                <a href="/win/write-it-now-win-/Home/StoryShow/storyInfo/s_id/<?php echo ($story["id"]); ?>/section/<?php echo ($pre); ?>"><?php echo ($pre_section); ?></a>&nbsp;&nbsp;
+                                <a href="/win/write-it-now-win-/Home/StoryShow/sectionList/s_id/<?php echo ($story["id"]); ?>">目录</a>&nbsp;&nbsp;
+                                <a href="/win/write-it-now-win-/Home/StoryShow/storyInfo/s_id/<?php echo ($story["id"]); ?>/section/<?php echo ($next); ?>"><?php echo ($next_section); ?></a>&nbsp;&nbsp;
                             </div>
                         </div>
                     </div>

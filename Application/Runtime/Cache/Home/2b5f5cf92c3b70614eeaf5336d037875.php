@@ -57,87 +57,71 @@
 </nav>
 
 <div class="layout-content" style="min-height: 500px">
+<!--完结布局-->
 <style>
-                .tag{
-                    min-width: 1200px;
-                }
-                .search{
-                    min-width: 1200px;
-                    background: url("/win/write-it-now-win-/Public/image/background/<?php echo ($bg); ?>") no-repeat;
-                    background-size: 100% 100%;
-                    height: 300px;
-                    margin-top: -20px;
-                }
-                #searching{
-                    height: 100%;
-                }
-                .search-input{
-                    display: inline-block;
-                    width: 400px;
-                    height: 36px;
-                    margin-top:130px;
-                    border:1px solid #dbdbdb;
-                }
-                .search-btn{
-                    display: inline-block;
-                    height: 36px;
-                    width: 60px;
-                    text-align: center;
-                    text-indent: 5px;
-                    letter-spacing: 4px;
-                    color:#fff;
-                    background: #bf2c24;
-                    vertical-align: top;
-                    margin-top: 130px;
-                    margin-left: -5px;
-                    padding-top: 8px;
-                }
-                .search-btn:hover{
-                    text-decoration: none;
-                    color: #fff;
-                    background-color: #d9534f;
-                }
-                .bookinfo h3{
-                    font-size: 16px;
-                }
-                /*鼠标悬浮图片缩放*/
-                .img:hover{
-                    -ms-transform:scale(1.1,1.2); /* IE 9 */
-                    -webkit-transform: scale(1.1,1.2); /* Safari */
-                    transform: scale(1.1,1.2); /* 标准语法 */
-                }
-            </style>
-                <div class="search">
-                    <div id="searching"class="text-center">
-                        <div>
-                            <form >
-                <input type="search" name="search-input" class="search-input" placeholder="Search">
+    .tag{
+        min-width: 1200px;
+    }
+    .search{
+        min-width: 1200px;
+        background: url("/win/write-it-now-win-/Public/image/background/<?php echo ($bg); ?>") no-repeat;
+        background-size: 100% 100%;
+        height: 300px;
+        margin-top: -20px;
+    }
+    #searching{
+        height: 100%;
+    }
+    .search-input{
+        display: inline-block;
+        width: 400px;
+        height: 36px;
+        margin-top:130px;
+        border:1px solid #dbdbdb;
+    }
+    .search-btn{
+        display: inline-block;
+        height: 36px;
+        width: 60px;
+        text-align: center;
+        text-indent: 5px;
+        letter-spacing: 4px;
+        color:#fff;
+        background: #bf2c24;
+        vertical-align: top;
+        margin-top: 130px;
+        margin-left: -5px;
+        padding-top: 8px;
+    }
+    .search-btn:hover{
+        text-decoration: none;
+        color: #fff;
+        background-color: #d9534f;
+    }
+    .bookinfo h3{
+        font-size: 16px;
+    }
+    /*鼠标悬浮图片缩放*/
+    .img:hover{
+        -ms-transform:scale(1.1,1.2); /* IE 9 */
+        -webkit-transform: scale(1.1,1.2); /* Safari */
+        transform: scale(1.1,1.2); /* 标准语法 */
+    }
+</style>
+<!--搜索-->
+<div class="search">
+    <div id="searching"class="text-center">
+        <div>
+            <form >
+                <input type="search" name="search-input" class="search-input" placeholder="斗破苍穹">
                 <a class="search-btn" target="_blank"><b>搜索</b>
                 </a>
             </form>
         </div>
     </div>
 </div>
+<!--人气-->
 <div class="tag container">
-    <div class="newbook">
-        <h3><?php echo ($tag); ?>&nbsp;·&nbsp;新书推荐</h3>
-        <hr style="border-bottom:1px solid black "/>
-        <div class="row" style="margin-top: 30px">
-            <?php if(is_array($newbook)): foreach($newbook as $key=>$v): ?><div class="col-sm-5 col-md-4 col-xs-12" style="padding-bottom: 30px ">
-                    <div class="row">
-                        <div class="col-sm-3" style="overflow: hidden">
-                            <a href="/win/write-it-now-win-/Home/StoryShow/readerStoryShow/s_id/<?php echo ($v["id"]); ?>"><img src="/win/write-it-now-win-/Public/<?php echo ($v["picture"]); ?>" class="img" alt="加载图片失败" style="width: 72px;height: 96px;box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);"></a>
-                        </div>
-                        <div class="col-sm-9 bookinfo">
-                            <h3><a style="color: black" href="/win/write-it-now-win-/Home/StoryShow/readerStoryShow/s_id/<?php echo ($v["id"]); ?>"><?php echo ($v["name"]); ?></a></h3>
-                            <p style="font-size: 12px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">简介：<?php echo ($v["info"]); ?></p>
-                            <p style="font-size: 12px;"><a href="/win/write-it-now-win-/Home/Index/showAuthor/author/<?php echo ($v["user_id"]); ?>"><span class="glyphicon glyphicon-user" style="color: #a6a6a6"><?php echo ($v["user_name"]); ?></span></a><span style="color: #bf2c24;border: 1px solid #df9591;float: right;"><?php echo ($v["font_count"]); ?>字</span><span style="color: #a6a6a6;border: 1px solid #bfbfbf;float: right;margin-right: 10px"><?php echo ($v["tag"]); ?></span><p>
-                        </div>
-                    </div>
-                </div><?php endforeach; endif; ?>
-        </div>
-    </div>
-
     <div class="popular-serial-novel">
         <h3><?php echo ($tag); ?>&nbsp;·&nbsp;人气书籍</h3>
         <hr style="border-bottom:1px solid black "/>
@@ -156,27 +140,25 @@
                 </div><?php endforeach; endif; ?>
         </div>
     </div>
-
     <div class="ending-book">
-        <h3><?php echo ($tag); ?>&nbsp;·&nbsp;完本特辑</h3>
+        <h3><?php echo ($tag); ?>&nbsp;·&nbsp;完本书库</h3>
         <hr style="border-bottom:1px solid black "/>
         <div class="row">
-           <?php if(is_array($ending_book)): foreach($ending_book as $key=>$v): ?><div class="col-sm-5 col-md-4 col-xs-12" style="padding-bottom: 30px ">
-                   <div class="row">
-                       <div class="col-sm-3" style="overflow: hidden">
-                           <a href="/win/write-it-now-win-/Home/StoryShow/readerStoryShow/s_id/<?php echo ($v["id"]); ?>"><img src="/win/write-it-now-win-/Public/<?php echo ($v["picture"]); ?>" class="img" alt="加载图片失败" style="width: 72px;height: 96px;box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);"></a>
-                       </div>
-                       <div class="col-sm-9 bookinfo">
-                           <h3><a style="color: black" href="/win/write-it-now-win-/Home/StoryShow/readerStoryShow/s_id/<?php echo ($v["id"]); ?>"><?php echo ($v["name"]); ?></a></h3>
-                           <p style="font-size: 12px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">简介：<?php echo ($v["info"]); ?></p>
-                           <p style="font-size: 12px;"><a href="/win/write-it-now-win-/Home/Index/showAuthor/author/<?php echo ($v["user_id"]); ?>"><span class="glyphicon glyphicon-user" style="color: #a6a6a6"><?php echo ($v["user_name"]); ?></span></a><span style="color: #bf2c24;border: 1px solid #df9591;float: right;"><?php echo ($v["font_count"]); ?>字</span><span style="color: #a6a6a6;border: 1px solid #bfbfbf;float: right;margin-right: 10px"><?php echo ($v["tag"]); ?></span><p>
-                       </div>
-                   </div>
-               </div><?php endforeach; endif; ?>
+            <?php if(is_array($ending_book)): foreach($ending_book as $key=>$v): ?><div class="col-sm-5 col-md-4 col-xs-12" style="padding-bottom: 30px ">
+                    <div class="row">
+                        <div class="col-sm-3" style="overflow: hidden">
+                            <a href="/win/write-it-now-win-/Home/StoryShow/readerStoryShow/s_id/<?php echo ($v["id"]); ?>"><img src="/win/write-it-now-win-/Public/<?php echo ($v["picture"]); ?>" class="img" alt="加载图片失败" style="width: 72px;height: 96px;box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);"></a>
+                        </div>
+                        <div class="col-sm-9 bookinfo">
+                            <h3><a style="color: black" href="/win/write-it-now-win-/Home/StoryShow/readerStoryShow/s_id/<?php echo ($v["id"]); ?>"><?php echo ($v["name"]); ?></a></h3>
+                            <p style="font-size: 12px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">简介：<?php echo ($v["info"]); ?></p>
+                            <p style="font-size: 12px;"><a href="/win/write-it-now-win-/Home/Index/showAuthor/author/<?php echo ($v["user_id"]); ?>"><span class="glyphicon glyphicon-user" style="color: #a6a6a6"><?php echo ($v["user_name"]); ?></span></a><span style="color: #bf2c24;border: 1px solid #df9591;float: right;"><?php echo ($v["font_count"]); ?>字</span><span style="color: #a6a6a6;border: 1px solid #bfbfbf;float: right;margin-right: 10px"><?php echo ($v["tag"]); ?></span><p>
+                        </div>
+                    </div>
+                </div><?php endforeach; endif; ?>
         </div>
     </div>
 </div>
-
 <script>
     //当主页面搜索链接被点击时执行
     $(".search-btn").click(function () {
