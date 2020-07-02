@@ -5,44 +5,35 @@ use Think\Page;
 class DiscussController extends Controller {
 
     public function showAll(){
-        $user_model=M('user');
+        $stu_model=M('stu');
         //导入分页助手类
         import('Org.Util.Page');
-        $total= $user_model->count();
+        $total= $stu_model->count();
         $page=new Page($total,8);
         $page->setConfig("header",'个用户');
         $pageControl=$page->show();
-        $users=$user_model->limit("$page->firstRow,$page->listRows")->order("id desc")->select();
-        $this-> assign('users',$users);
+        $stus=$stu_model->limit("$page->firstRow,$page->listRows")->order("id desc")->select();
+        $this-> assign('stus',$stus);
         $this-> assign('pageControl', $pageControl);
-        $this-> display();
+        $this-> display('discuss_list');
     }
 
-    /**
-     * 留言列表
-     */
-    public function listAction(){
-        //实例化comment模型
-        $commentModel = new \Home\Model\DiscussModel();
-//        //取得留言总数
-//        $num = $commentModel->getNumber();
-//        //取得所有留言数据
-//        $data = $commentModel->getAll($page->getLimit());
-        //载入视图文件
-        require './Application/Home/View/discuss_list.html';
-    }
-
-    /**
-     * 发表留言
-     */
-    public function addAction(){
-        //判断是否是POST方式提交
-        if(empty($_POST)){
-            return false;
+    //实现添加功能
+    public function add()
+    {   $stu=M('stu');
+        $stuinfo['poster']=$_POST['poster'];
+        $stuinfo['mail']=$_POST['mail'];
+        $stuinfo['comment']=$_POST['comment'];
+        $result = $stu->add($stuinfo);
+        if(   $result)
+        {
+            $this->success('添加成功！！',U('Discuss/showAll'));
         }
-        //实例化comment模型
-        $commentModel = new \Home\Model\DiscussModel();
-        //调用insert方法
-        $pass = $commentModel->insert();
+        if( !$result)
+        {
+            $this->error('添加失败！！');
+        }
     }
+
+
 }

@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/write-it-now-win-/Home/Index/index">首页</a></li>
-                <li><a href="#">讨论区</a></li>
+                <li><a href="/write-it-now-win-/Home/Discuss/showAll">讨论区</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php if($_SESSION['user_name']== null): ?><li><a href="/write-it-now-win-/Home/User/login" target="_blank">登录</a></li>

@@ -40,3 +40,141 @@ ERR: Think\Model:getNumber方法不存在！
 [ 2020-07-02T11:09:18+08:00 ] ::1 /write-it-now-win-/index.php/Home/Discuss/Public/css/home.css
 ERR: 非法操作:Public
 
+[ 2020-07-02T16:05:43+08:00 ] ::1 /write-it-now-win-/index.php/Home/Discuss/showAll
+ERR: 模板不存在:./Application/Home/View/Discuss/discuss_list.html
+
+[ 2020-07-02T16:06:45+08:00 ] ::1 /write-it-now-win-/Public/scripts/simpla.jquery.configuration.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:06:45+08:00 ] ::1 /write-it-now-win-/Public/scripts/facebox.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:06:45+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery-1.3.2.min.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:06:45+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.datePicker.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:06:45+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.wysiwyg.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:06:45+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.date.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:06:58+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery-1.3.2.min.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:06:58+08:00 ] ::1 /write-it-now-win-/Public/scripts/facebox.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:06:58+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.wysiwyg.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:06:58+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.date.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:06:58+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.datePicker.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:06:58+08:00 ] ::1 /write-it-now-win-/Public/scripts/simpla.jquery.configuration.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery-1.3.2.min.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/facebox.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/simpla.jquery.configuration.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.wysiwyg.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.date.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.datePicker.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery-1.3.2.min.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/simpla.jquery.configuration.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/facebox.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.wysiwyg.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.datePicker.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:08:56+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.date.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:06+08:00 ] ::1 /write-it-now-win-/Public/scripts/facebox.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:06+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery-1.3.2.min.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:06+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.wysiwyg.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:06+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.date.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:07+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.datePicker.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:07+08:00 ] ::1 /write-it-now-win-/Public/scripts/simpla.jquery.configuration.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:13+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery-1.3.2.min.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:13+08:00 ] ::1 /write-it-now-win-/Public/scripts/simpla.jquery.configuration.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:13+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.datePicker.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:13+08:00 ] ::1 /write-it-now-win-/Public/scripts/facebox.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:13+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.wysiwyg.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:10:13+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.date.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:12:09+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery-1.3.2.min.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:12:09+08:00 ] ::1 /write-it-now-win-/Public/scripts/simpla.jquery.configuration.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:12:09+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.wysiwyg.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:12:09+08:00 ] ::1 /write-it-now-win-/Public/scripts/facebox.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:12:09+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.datePicker.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:12:09+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.date.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:12:09+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.wysiwyg.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:12:09+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.datePicker.js
+ERR: 无法加载控制器:Public
+
+[ 2020-07-02T16:12:09+08:00 ] ::1 /write-it-now-win-/Public/scripts/jquery.date.js
+ERR: 无法加载控制器:Public
+
